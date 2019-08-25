@@ -138,9 +138,6 @@ function watchJS(){
 function watchImg(){
   watch('src/assets/img/**/*', series(images, reload));
 }
-function watchPortfolio(){
-  watch('pages/portfolio/**/images/*', series(portfolioImages, reload));
-}
 
 // BROWSER SYNC
 function browserSyncInit(done) {
@@ -159,14 +156,6 @@ function images() {
     .pipe(newer('dist/assets/img/'))
     .pipe(imagemin())
     .pipe(dest('dist/assets/img/'));
-}
-// COPIES AND MINIFY PORTFOLIO IMAGE TO DIST
-function portfolioImages() {
-  console.log('---------------OPTIMIZING IMAGES---------------');
-  return src('pages/portfolio/**/images/*.+(png|jpg|jpeg|gif|svg)')
-    .pipe(newer('dist/portfolio/'))
-    .pipe(imagemin())
-    .pipe(dest('dist/portfolio/'));
 }
 
 // PLACES FONT FILES IN THE DIST FOLDER
@@ -319,7 +308,7 @@ exports.linters = series(htmlLint, scssLint, JSLint);
 exports.accessibility = HTMLAccessibility;
 
 // DEV
-exports.default = series(cleanDist, rootFiles, font, jsVendor, cssVendor, images, portfolioImages, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, parallel(watchHTML, watchImg, watchJS, watchSCSS, watchPortfolio));
+exports.default = series(cleanDist, rootFiles, font, jsVendor, cssVendor, images, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, parallel(watchHTML, watchImg, watchJS, watchSCSS));
 
 // PROD
 exports.prod = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
