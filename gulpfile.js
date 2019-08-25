@@ -161,7 +161,6 @@ function deploy() {
 }
 
 // ------------ OPTIMIZATION TASKS -------------
-
 // COPIES AND MINIFY IMAGE TO DIST
 function images() {
   console.log('---------------OPTIMIZING IMAGES---------------');
@@ -187,6 +186,7 @@ function jsVendor() {
   return src([
       // 'node_modules/jquery/dist/jquery.js',
       // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+      'node_modules/ionicons/dist/ionicons.js',
       'src/assets/vendor/js/*',
     ])
     .pipe(dest('dist/assets/vendor/js'))
@@ -249,6 +249,12 @@ function HTMLAccessibility() {
 }
 
 // ------------ PRODUCTION TASKS -------------
+// COPIES FILES TO BE PUT IN /DIST
+function rootFiles() {
+  console.log('---------------COPYING ROOT FILES---------------');
+  return src('src/root/**/*.*')
+    .pipe(dest('dist/'));
+}
 
 // CHANGE TO MINIFIED VERSIONS OF JS AND CSS
 function renameSources() {
@@ -268,6 +274,7 @@ function concatScripts() {
       'dist/assets/vendor/js/jquery.js',
       'dist/assets/vendor/js/popper.js',
       'dist/assets/vendor/js/bootstrap.js',
+
       'dist/assets/js/*'
     ])
     .pipe(sourcemaps.init())
@@ -312,10 +319,10 @@ exports.linters = series(htmlLint, scssLint, JSLint);
 exports.accessibility = HTMLAccessibility;
 
 // DEV
-exports.default = series(cleanDist, font, jsVendor, cssVendor, images, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, parallel(watchHTML, watchImg, watchJS, watchSCSS));
+exports.default = series(cleanDist, rootFiles, font, jsVendor, cssVendor, images, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, parallel(watchHTML, watchImg, watchJS, watchSCSS));
 
 // PROD
-exports.prod = series(cleanDist, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
+exports.prod = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
 
 // Build
-exports.build = series(cleanDist, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs);
+exports.build = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs);
