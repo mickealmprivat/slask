@@ -17,6 +17,7 @@
     "svelte-preprocess-less": "^0.4.0"
   },
   "dependencies": {
+    "autoprefixer": "^9.6.1",
     "pam-css": "^1.0.0-beta.2",
     "postcss-import": "^12.0.1",
     "sirv-cli": "^0.4.4"

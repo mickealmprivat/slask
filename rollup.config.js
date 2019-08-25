@@ -8,8 +8,19 @@ import autoPreprocess from 'svelte-preprocess';
 const production = !process.env.ROLLUP_WATCH;
 
 const options = {
-	postcss: true,
-	less: true
+	transformers: {
+		less: {
+			includePaths: [
+				'node_modules',
+				'src'
+			]
+		},
+		postcss: {
+			plugins: [
+				require('autoprefixer'),
+			]
+		}
+	}
 }
 
 export default {
