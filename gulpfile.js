@@ -35,11 +35,15 @@ const files = {
 }
 
 // ------------ DEVELOPMENT TASKS -------------
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
 // COMPILE SCSS INTO CSS
 function compileSCSS() {
   console.log('---------------COMPILING SCSS---------------');
-  return src(['src/assets/scss/main.scss', 'src/assets/scss/rtl.scss'])
+  return src(['src/assets/scss/**/*.scss'])
     .pipe(sass({
       outputStyle: 'expanded',
       sourceComments: 'map',
@@ -48,7 +52,7 @@ function compileSCSS() {
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(dest('dist/assets/css'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 }
 
 // USING PANINI, TEMPLATE, PAGE AND PARTIAL FILES ARE COMBINED TO FORM HTML MARKUP
@@ -122,19 +126,19 @@ function JSLint() {
 
 
 function watchHTML(){
-  watch('src/**/*.html', series(resetPages, compileHTML, browserSync.reload));
+  watch('src/**/*.html', series(resetPages, compileHTML, reload);
 }
 
 function watchSCSS(){
-  watch(['src/assets/scss/**/*.scss', 'src/assets/scss/*.scss'] , series(compileSCSS, browserSync.reload));
+  watch(['src/assets/scss/**/*.scss', 'src/assets/scss/*.scss'] , series(compileSCSS, reload);
 }
 
 function watchJS(){
-  watch('src/assets/js/*.js', series(compileJS, browserSync.reload));
+  watch('src/assets/js/*.js', series(compileJS, reload);
 }
 
 function watchImg(){
-  watch('src/assets/img/**/*', series(images, browserSync.reload));
+  watch('src/assets/img/**/*', series(images, reload);
 }
 
 // BROWSER SYNC
