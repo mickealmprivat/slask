@@ -312,3 +312,6 @@ exports.default = series(cleanDist, font, jsVendor, cssVendor, images, compileHT
 
 // PROD
 exports.prod = series(cleanDist, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
+
+// Build
+exports.build = series(cleanDist, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs);
