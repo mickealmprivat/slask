@@ -126,19 +126,19 @@ function JSLint() {
 
 
 function watchHTML(){
-  watch('src/**/*.html', series(resetPages, compileHTML, reload);
+  watch('src/**/*.html', series(resetPages, compileHTML, reload));
 }
 
 function watchSCSS(){
-  watch(['src/assets/scss/**/*.scss', 'src/assets/scss/*.scss'] , series(compileSCSS, reload);
+  watch(['src/assets/scss/**/*.scss', 'src/assets/scss/*.scss'] , series(compileSCSS, reload));
 }
 
 function watchJS(){
-  watch('src/assets/js/*.js', series(compileJS, reload);
+  watch('src/assets/js/*.js', series(compileJS, reload));
 }
 
 function watchImg(){
-  watch('src/assets/img/**/*', series(images, reload);
+  watch('src/assets/img/**/*', series(images, reload));
 }
 
 // BROWSER SYNC
