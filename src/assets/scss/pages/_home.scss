@@ -1,7 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-.hero {
-    background: url('https://images.unsplash.com/photo-1566578143640-f0c819f43c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format');
-    background-size: cover;
+.portfolio-case {
+    &__header {
+        padding: 40px 0;
+
+        .portfolio-case__logo {
+            max-width: 250px;
+            width: 100%;
+        }
+        hgroup {
+            h1, h2, h3 { margin: 0; }
+            h2 { font-weight: 400; }
+            h3 { font-weight: 300; }
+        }
+    }
+}
+
+
+// Mr Green
+// -----------------------------------------------------------------------------
+.mrgreen {
+    .portfolio-case__header {
+        background: #18723c;
+        color: #fff;
+    }
 }

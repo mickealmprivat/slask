@@ -3,11 +3,13 @@
 // -----------------------------------------------------------------------------
 .navbar {
     padding: .5rem 2rem;
+
+    svg {
+        max-width: 75px;
+    }
 }
 
-svg {
-    max-width: 75px;
-}
+
 
 .fixed-top {
     border-bottom: 1px solid $border-outline-color;
