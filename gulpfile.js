@@ -39,6 +39,13 @@ function reload(done) {
   done();
 }
 
+// COPY PORTFOLIO ASSETS
+function portfolio() {
+  console.log('---------------COPYING PORTFOLIO ASSETS---------------');
+  return src(['src/pages/portfolio/**/images/*', 'src/pages/portfolio/**/videos/*'])
+  .pipe(dest('dist/portfolio/'));
+}
+
 // COMPILE SCSS INTO CSS
 function compileSCSS() {
   console.log('---------------COMPILING SCSS---------------');
@@ -137,6 +144,10 @@ function watchJS(){
 
 function watchImg(){
   watch('src/assets/img/**/*', series(images, reload));
+}
+
+function watchPortfolio() {
+  watch('src/pages/portfolio/**/**/', series(portfolio, reload));
 }
 
 // BROWSER SYNC
@@ -308,10 +319,10 @@ exports.linters = series(htmlLint, scssLint, JSLint);
 exports.accessibility = HTMLAccessibility;
 
 // DEV
-exports.default = series(cleanDist, rootFiles, font, jsVendor, cssVendor, images, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, parallel(watchHTML, watchImg, watchJS, watchSCSS));
+exports.default = series(cleanDist, rootFiles, font, jsVendor, cssVendor, images, portfolio, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, parallel(watchHTML, watchImg, watchJS, watchSCSS, watchPortfolio));
 
 // PROD
-exports.prod = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
+exports.prod = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, portfolio, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
 
 // Build
-exports.build = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs);
+exports.build = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, portfolio, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs);
