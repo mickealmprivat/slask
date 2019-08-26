@@ -11,7 +11,7 @@ title: Mr Green Case study
 				<div class="media-body">
 					<hgroup>
 						<h2>Case study</h2>
-						<h1>Mr Green - Swedish deposit limits</h1>
+						<h1>Mr Green - Swedish deposit limits (version 2)</h1>
 						<h3>2019</h3>
 					</hgroup>
 				</div>
@@ -21,12 +21,44 @@ title: Mr Green Case study
 
 	<section id="problem">
 		<div class="container">
-			<h1>Problem description</h1>
-			<p>In January of 2019, Sweden became a regulated gambling market, putting several responsible gambling laws in place.</p>
-			<p>One of these requires all new players to set deposit limits when they register a new account, which is great as it forces the player to think about their gambling habits and hopefully leads to greater player protection.</p>
+			<div class="jumbotron mb-5">
+				<h1>Problem description</h1>
+				<p>In January of 2019, Sweden became a regulated gambling market under the Swedish Gambling Authority (Spelinspektionen), putting several responsible gambling laws in place. One of these requires all new players to set deposit limits when they register a new account, which is great as it forces the player to think about their gambling habits and hopefully leads to greater player protection.</p>
+				<p>A few months after our initial release, it became clear that players were setting incorrect limits, leading to lots of player frustration, customer support contacts, and loss of revenue.</p>
+			</div>
+			
+			<h2>User journey</h2>
+			<svg width="1140" height="84" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#00AEB3" d="M400 26h740v5H400z"/><path fill="#8DD9DB" d="M0 26h400v5H0z"/><circle fill="#8DD9DB" cx="121.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="413.5" cy="28.5" r="28.5"/><circle fill="#00AEB3" cx="706.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="998.5" cy="28.5" r="21.5"/><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="79.412" y="68">Registration</tspan></text><text font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" fill="#00AEB3"><tspan x="358.445" y="80">Limit setting</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="677.976" y="68">Deposit</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="982.828" y="68">Play</tspan></text></g></svg>
+			<p>At this point, the user has just completed the registration process, and we must now present them with quite a bit of information to digest, on top of forcing more input fields on them.</p>
+			<h2 class="mt-5">Discovery</h2>
+			<div class="media">
+				<div class="media-body">
+					<p>Our initial implementation was delivered under a tight deadline without testing, so we welcomed this opportunity to return and make improvements on it. The controls we had used were copied from an existing implementation on the site, and felt cumbersome and lacked any kind of anchoring for new players.</p>
+					<p>Digging further into the problem, we looked into BI-Data, Voice of Customer reports, and interviewed staff in Customer Service to get a better understanding of what the problem space might be. We deduced that players (especially first time players) had difficulty estimating what a reasonable limit would be, as well as understanding how the different limits relate to each other and when they are reached/reset.</p>
+					<p>We then had two different problem areas to start focusing on: improving the flow of setting limits, and increasing player understanding of their mechanics.</p>
+				</div>
+				<img src="images/limits-old.png" title="Old limits flow" />
+			</div>
 		</div>
 	</section>
 
+	<section id="limits">
+		<div class="container portfolio-case__sub-header limits mb-5">
+			<div class="media">
+				<video autoplay loop poster="one-does-not-simply-placeholder.jpg" class="mr-5">
+					<source src="videos/limits.webm" width="556" height="1080"  type="video/webm">
+					<source src="videos/limits.mp4" width="556" height="1080" type="video/mp4">
+				</video>
+				<div class="media-body">
+					<h1>Limit setting</h1>
+					<p>We needed to improve the flow of setting the actual limits.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</section>
+		
 	<section id="onboarding">
 		<div class="container portfolio-case__sub-header onboarding mb-5">
 			<div class="media">
@@ -49,23 +81,6 @@ title: Mr Green Case study
 		</div>
 	</section>
 	
-	<section id="limits">
-		<div class="container portfolio-case__sub-header limits mb-5">
-			<div class="media">
-				<video autoplay loop poster="one-does-not-simply-placeholder.jpg" class="mr-5">
-					<source src="videos/limits.webm" width="556" height="1080"  type="video/webm">
-					<source src="videos/limits.mp4" width="556" height="1080" type="video/mp4">
-				</video>
-				<div class="media-body">
-					<h1>Limit setting</h1>
-					<p>We needed to improve the flow of setting the actual limits.</p>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</section>
-
 	<section id="testing">
 		<div class="container portfolio-case__sub-header testing mb-5">
 			<div class="media">
