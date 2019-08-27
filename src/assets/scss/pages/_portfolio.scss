@@ -1,12 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-a#top {
-    display: block;
-    height: 0;
-    position:relative;
-    top: -100px;
-}
+
+$case-brand-height: 60px;
+
 .portfolio-case {
     &__header {
         height: calc(100vh - #{$nav-height});
@@ -39,20 +36,31 @@ a#top {
 
 
         &--min {
-            @extend .sticky-top;
-            display: none;
+            align-items: center;
+            display: flex;
+            height: $case-brand-height;
+            justify-content: center;
+            position: sticky;
+            text-align: center;
             top: $nav-height;
+            width: 100%;
 
             .portfolio-case__logo {
-                max-width: 60px;
+                display: none;
+                max-height: 40px;
+                margin-right: 24px;
             }
             h1 { 
-                font-size: 24px; 
+                display: none;
+                font-size: 20px; 
                 font-weight: 300;
             }
 
-            .is-visible {
+            &-top {
                 display: block;
+                height: 0;
+                position: relative;
+                top: -$nav-height;
             }
         }
     }
@@ -75,9 +83,9 @@ a#top {
 
 // Mr Green
 // -----------------------------------------------------------------------------
-.portfolio-case__header[data-brand="Mr Green"] {
-    &,
-    &--min {
+.portfolio-case__header {
+    &[data-brand="Mr Green"],
+    &--min[data-brand="Mr Green"] {
         background: #18723c;
         color: #fff;
     }
