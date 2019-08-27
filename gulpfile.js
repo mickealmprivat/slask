@@ -6,7 +6,6 @@ const log = require('fancy-log');
 const colors = require('ansi-colors');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-const bourbon = require('node-bourbon').includePaths;
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
@@ -53,8 +52,7 @@ function compileSCSS() {
     .pipe(sass({
       outputStyle: 'expanded',
       sourceComments: 'map',
-      sourceMap: 'scss',
-      includePaths: bourbon
+      sourceMap: 'scss'
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(dest('dist/assets/css'))
@@ -185,6 +183,7 @@ function jsVendor() {
   return src([
       // 'node_modules/jquery/dist/jquery.js',
       // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+      'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
       'node_modules/ionicons/dist/ionicons.js',
       'src/assets/vendor/js/*',
     ])
@@ -273,6 +272,7 @@ function concatScripts() {
       'dist/assets/vendor/js/jquery.js',
       // 'dist/assets/vendor/js/popper.js',
       // 'dist/assets/vendor/js/bootstrap.js',
+      'dist/assets/vendor/js/ScrollMagic.min.js',
       'dist/assets/vendor/js/ionicons.js',
 
       'dist/assets/js/*'

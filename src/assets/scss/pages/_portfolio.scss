@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+a#top {
+    display: block;
+    height: 0;
+    position:relative;
+    top: -100px;
+}
+.portfolio-case {
+    &__header {
+        height: calc(100vh - #{$nav-height});
+
+        .container { height: 100%; }
+        .media { height: 100%; align-items: center; }
+
+        .portfolio-case__logo {
+            margin-right: 70px;
+            max-width: 250px;
+            transform: scale(1);
+            transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
+        }
+        hgroup {
+            h1, h2, h3 { margin: 0; }
+            h1 { transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+            h2, h3 { transform: scale(1); transition: transform .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);; }
+            h2 { font-weight: 400; }
+            h3 { font-weight: 300; }
+        }
+        
+        &.sticky {
+            .portfolio-case__logo { max-width: 60px; position: relative; bottom: 50%; }
+            h1 { 
+                font-size: 24px; 
+                font-weight: 300;
+            }
+        }
+
+
+        &--min {
+            @extend .sticky-top;
+            display: none;
+            top: $nav-height;
+
+            .portfolio-case__logo {
+                max-width: 60px;
+            }
+            h1 { 
+                font-size: 24px; 
+                font-weight: 300;
+            }
+
+            .is-visible {
+                display: block;
+            }
+        }
+    }
+    &__sub-header {
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 150px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        
+        .media-body p:first-child { font-weight: 400; }
+
+        video { 
+            margin-top: -56px;
+            max-height: 500px;
+        }
+    }
+    .jumbotron { font-size: 18px; }
+}
+
+// Mr Green
+// -----------------------------------------------------------------------------
+.portfolio-case__header[data-brand="Mr Green"] {
+    &,
+    &--min {
+        background: #18723c;
+        color: #fff;
+    }
+}
+
+.onboarding {
+    background: #1997a2;
+    color: #fff;
+}
+.limits {
+    background: #a21970;
+    color: #fff;
+}
