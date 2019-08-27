@@ -23,10 +23,9 @@ title: Mr Green Case study
 	</div>
 </div>
 	
-
-<section id="problem" class="mt-5">
+<section id="problem">
 	<div class="container">
-		<div class="jumbotron mb-5">
+		<div class="jumbotron mb-6">
 			<h1>Problem description</h1>
 			<p>In January of 2019, Sweden became a regulated gambling market under the Swedish Gambling Authority (Spelinspektionen), putting several responsible gambling laws in place. One of these requires all new players to set deposit limits when they register a new account, which is great as it forces the player to think about their gambling habits and hopefully leads to greater player protection.</p>
 			<p>A few months after our initial release, it became clear that players were setting incorrect limits, leading to lots of player frustration, customer support contacts, and loss of revenue.</p>
@@ -34,7 +33,8 @@ title: Mr Green Case study
 		
 		<h2>User journey</h2>
 		<svg width="1140" height="84" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#00AEB3" d="M400 26h740v5H400z"/><path fill="#8DD9DB" d="M0 26h400v5H0z"/><circle fill="#8DD9DB" cx="121.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="413.5" cy="28.5" r="28.5"/><circle fill="#00AEB3" cx="706.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="998.5" cy="28.5" r="21.5"/><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="79.412" y="68">Registration</tspan></text><text font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" fill="#00AEB3"><tspan x="358.445" y="80">Limit setting</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="677.976" y="68">Deposit</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="982.828" y="68">Play</tspan></text></g></svg>
-		<p>At this point, the user has just completed the registration process, and we must now present them with quite a bit of information to digest, on top of forcing more input fields on them.</p>
+		<p>At this point, the user has just completed the registration process which</p>
+		
 		<h2 class="mt-5">Discovery</h2>
 		<div class="media">
 			<div class="media-body">
@@ -56,7 +56,9 @@ title: Mr Green Case study
 			</video>
 			<div class="media-body">
 				<h1>Limit setting</h1>
-				<p>We needed to improve the flow of setting the actual limits.</p>
+				<p>We knew that players were broadly guessing when it came to setting their limits, and anchoring can help with getting a better perspective on what's reasonable.</p>
+				<p>It was important for us to get a spread of suggestions that would suit most of our players, so I argued <a href="https://lawsofux.com/millers-law" target="_blank" title="Miller's law">Miller's Law</a> and the <a href="https://lawsofux.com/serial-position-effect.html" title="The Serial Position Effect" target="_blank">Serial Position Effect</a> to help convince our stakeholders of a reasonable amount of suggestions. Based on that number of options, I arrived at a dropdown for my solution and apart from the suggested values, we also had to cover the scenario of letting the user enter their own amount.</p>
+				<p>Our C-level and business organisation pitched the idea of automatically calculating limits based on your initial choice, and I added a simple slide down animation to the calculated input fields to focus the users attention and help them understand what just happened.</p>
 			</div>
 		</div>
 	</div>
@@ -67,20 +69,22 @@ title: Mr Green Case study
 <section id="onboarding">
 	<div class="container portfolio-case__sub-header onboarding mb-5">
 		<div class="media">
-			<video autoplay loop poster="one-does-not-simply-placeholder.jpg" class="mr-5">
-				<source src="videos/onboarding.webm" width="556" height="1080"  type="video/webm">
-				<source src="videos/onboarding.mp4" width="556" height="1080" type="video/mp4">
-			</video>
 			<div class="media-body">
 				<h1>Onboarding</h1>
 				<p>Players setting limits for themselves that are correct and realistic is crucial both for playing responsibly, and taking the rest of tools we provide seriously. They can be very difficult to grasp, however, and a major problem we noticed from both BI-data and customer support feedback was players simply having set the wrong limits due to lack of understanding.</p>
 				<p>Having just come from the registration flow, I felt we had an opportunity to try and "lighten things up" and give the user a bit of a break before proceeding to the next set of input controls.</p>
 			</div>
+			<video autoplay loop poster="one-does-not-simply-placeholder.jpg" class="ml-5">
+				<source src="videos/onboarding.webm" width="556" height="1080"  type="video/webm">
+				<source src="videos/onboarding.mp4" width="556" height="1080" type="video/mp4">
+			</video>
 		</div>
 	</div>
 	<div class="container">
 		<h2>Handover</h2>
 		<p>The best developer hand-over for animation is almost always in code, rather than a video produced in Studio or After Effects. Instead of having to document easings and timings, it's right there on the page for them. So I brought up a new Pen and produced the animation to be easily adapted to whatever triggers our code stack might provide.</p>
+		
+		<small>Click the respective 'Activate' links</small>
 		<p class="codepen" data-show-tab-bar='no' data-height="386" data-theme-id="0" data-default-tab="result" data-user="mickealm" data-slug-hash="mYbbPG" style="height: 386px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Limits animation">
 		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 	</div>
@@ -96,7 +100,15 @@ title: Mr Green Case study
 			</div>
 		</div>
 	</div>
+</section>
+
+<section id="result">
 	<div class="container">
-			
+		<div class="jumbotron">
+			<h1>End result</h1>
+			<p>Measuring three months post release of the project, we saw great improvements in both our KPI's!</p>
+			<p>The spread of limits set became much better, and equaled out between low, medium, and high.</p>
+			<p>Customer support contacts regarding limits went down by 40%.</p>
+		</div>
 	</div>
 </section>
