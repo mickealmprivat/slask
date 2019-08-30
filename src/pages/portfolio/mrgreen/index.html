@@ -32,7 +32,7 @@ title: Mr Green Case study
 		</div>
 		
 		<h2>User journey</h2>
-		<svg width="1140" height="84" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#00AEB3" d="M400 26h740v5H400z"/><path fill="#8DD9DB" d="M0 26h400v5H0z"/><circle fill="#8DD9DB" cx="121.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="413.5" cy="28.5" r="28.5"/><circle fill="#00AEB3" cx="706.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="998.5" cy="28.5" r="21.5"/><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="79.412" y="68">Registration</tspan></text><text font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" fill="#00AEB3"><tspan x="358.445" y="80">Limit setting</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="677.976" y="68">Deposit</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="982.828" y="68">Play</tspan></text></g></svg>
+		<svg width="1140" height="84" xmlns="http://www.w3.org/2000/svg" class="user-journey"><g fill="none" fill-rule="evenodd"><path fill="#00AEB3" d="M400 26h740v5H400z"/><path fill="#8DD9DB" d="M0 26h400v5H0z"/><circle fill="#8DD9DB" cx="121.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="413.5" cy="28.5" r="28.5"/><circle fill="#00AEB3" cx="706.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="998.5" cy="28.5" r="21.5"/><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="79.412" y="68">Registration</tspan></text><text font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" fill="#00AEB3"><tspan x="358.445" y="80">Limit setting</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="677.976" y="68">Deposit</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="982.828" y="68">Play</tspan></text></g></svg>
 		<p>At this point, the user has just completed the registration process which</p>
 		
 		<h2 class="mt-5">Discovery</h2>
@@ -50,10 +50,10 @@ title: Mr Green Case study
 <section id="limits">
 	<div class="container portfolio-case__sub-header limits mb-5">
 		<div class="media">
-			<video autoplay loop poster="one-does-not-simply-placeholder.jpg" class="mr-5">
-				<source src="videos/limits.webm" width="556" height="1080"  type="video/webm">
-				<source src="videos/limits.mp4" width="556" height="1080" type="video/mp4">
-			</video>
+			<!-- <video autoplay loop class="mr-5">
+				<source src="videos/limits.webm" width="216" height="469"  type="video/webm">
+				<source src="videos/limits.mp4" width="216" height="469" type="video/mp4">
+			</video> -->
 			<div class="media-body">
 				<h1>Limit setting</h1>
 				<p>We knew that players were broadly guessing when it came to setting their limits, and anchoring can help with getting a better perspective on what's reasonable.</p>
@@ -74,10 +74,13 @@ title: Mr Green Case study
 				<p>Players setting limits for themselves that are correct and realistic is crucial both for playing responsibly, and taking the rest of tools we provide seriously. They can be very difficult to grasp, however, and a major problem we noticed from both BI-data and customer support feedback was players simply having set the wrong limits due to lack of understanding.</p>
 				<p>Having just come from the registration flow, I felt we had an opportunity to try and "lighten things up" and give the user a bit of a break before proceeding to the next set of input controls.</p>
 			</div>
-			<video autoplay loop poster="one-does-not-simply-placeholder.jpg" class="ml-5">
-				<source src="videos/onboarding.webm" width="556" height="1080"  type="video/webm">
-				<source src="videos/onboarding.mp4" width="556" height="1080" type="video/mp4">
-			</video>
+
+			<div class="phone ml-5">
+				<video autoplay loop>
+					<source src="videos/onboarding.webm" width="216" height="469" type="video/webm">
+					<source src="videos/onboarding.mp4" width="216" height="470" type="video/mp4">
+				</video>
+			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -89,7 +92,6 @@ title: Mr Green Case study
 		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 	</div>
 </section>
-
 <section id="testing">
 	<div class="container portfolio-case__sub-header testing mb-5">
 		<div class="media">

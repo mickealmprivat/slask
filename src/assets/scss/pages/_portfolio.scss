@@ -7,6 +7,7 @@ $case-brand-height: 60px;
 .portfolio-case {
     &__header {
         height: calc(100vh - #{$nav-height});
+        z-index: 1000;
 
         .container { height: 100%; }
         .media { height: 100%; align-items: center; }
@@ -25,14 +26,6 @@ $case-brand-height: 60px;
             h2 { font-weight: 400; }
             h3 { font-weight: 300; }
         }
-        
-        &.sticky {
-            .portfolio-case__logo { max-width: 60px; position: relative; bottom: 50%; }
-            h1 { 
-                font-size: 24px; 
-                font-weight: 300;
-            }
-        }
 
 
         &--min {
@@ -44,6 +37,7 @@ $case-brand-height: 60px;
             text-align: center;
             top: $nav-height;
             width: 100%;
+            z-index: 1000;
 
             .portfolio-case__logo {
                 display: none;
@@ -72,13 +66,26 @@ $case-brand-height: 60px;
         padding-bottom: 32px;
         
         .media-body p:first-child { font-weight: 400; }
-
-        video { 
-            margin-top: -56px;
-            max-height: 500px;
-        }
     }
     .jumbotron { font-size: 18px; }
+}
+
+.phone {
+    align-items: center;
+    background: url('/assets/img/iphone.png') center center no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 248px;
+
+    video {
+        background-size: fill;
+        clip-path: url(#iphone-screen);
+        display: block;
+        max-height: 470px;
+        max-width: 216px;
+        z-index: 1;
+    }
 }
 
 // Mr Green
@@ -86,9 +93,13 @@ $case-brand-height: 60px;
 .portfolio-case__header {
     &[data-brand="Mr Green"],
     &--min[data-brand="Mr Green"] {
-        background: #18723c;
+        background: #144C2C;
         color: #fff;
     }
+}
+.user-journey { 
+    path { fill: #55BA64; }
+    circle, text { fill: #1F7C47; }
 }
 
 // .onboarding {
