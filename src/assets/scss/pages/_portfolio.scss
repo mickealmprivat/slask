@@ -67,7 +67,6 @@ $case-brand-height: 60px;
         
         .media-body p:first-child { font-weight: 400; }
     }
-    .jumbotron { font-size: 18px; }
 }
 
 .phone {
@@ -87,6 +86,13 @@ $case-brand-height: 60px;
         z-index: 1;
     }
 }
+
+
+.dark {
+    background-color: #1A1E23;
+    color: #F3F5F6;
+}
+.light-grey { background-color: #F4F6F7; }
 
 // Mr Green
 // -----------------------------------------------------------------------------
