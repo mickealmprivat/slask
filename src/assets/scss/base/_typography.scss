@@ -10,5 +10,14 @@
     font: normal 100% / 1.4 $text-font-stack;
   }
   p {
-    font-size: 1.125rem;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .text {
+    &-large {
+      font-size: 24px;
+    }
+    &-small {
+      font-size: 16px;
+    }
   }

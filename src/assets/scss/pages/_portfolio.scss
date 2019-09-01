@@ -5,6 +5,19 @@
 $case-brand-height: 60px;
 
 .portfolio-case {
+    section {
+        margin: 3rem 0;
+        padding: 3rem 0;
+    }
+    .secondary-info {
+        h2, h3 { line-height: 48px; }
+        p { font-size: 18px; }
+    }
+    
+    .media-body p:first-of-type {
+        @extend .text-large;
+    }
+
     &__header {
         height: calc(100vh - #{$nav-height});
         z-index: 1000;
@@ -35,7 +48,7 @@ $case-brand-height: 60px;
             justify-content: center;
             position: sticky;
             text-align: center;
-            top: $nav-height;
+            top: 0;
             width: 100%;
             z-index: 1000;
 
@@ -58,15 +71,12 @@ $case-brand-height: 60px;
             }
         }
     }
-    &__sub-header {
-        font-size: 20px;
-        font-weight: 300;
-        margin-top: 150px;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        
-        .media-body p:first-child { font-weight: 400; }
-    }
+}
+.portfolio-mobile-screen {
+    @extend .shadow;
+
+    height: auto;
+    max-width: 225px;
 }
 
 .phone {
