@@ -18,6 +18,13 @@ $case-brand-height: 60px;
         @extend .text-large;
     }
 
+    aside {
+        border: 1px solid;
+        font-size: 16px;
+        margin-bottom: 1rem;
+        padding: 16px;
+    }
+
     &__header {
         height: calc(100vh - #{$nav-height});
         z-index: 1000;
@@ -101,6 +108,11 @@ $case-brand-height: 60px;
 .dark {
     background-color: #1A1E23;
     color: #F3F5F6;
+
+    aside {
+        background-color: rgb(55, 66, 79);
+        border-color: rgb(67, 79, 95);
+    }
 }
 .light-grey { background-color: #F4F6F7; }
 
