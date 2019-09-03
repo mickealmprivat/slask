@@ -1,27 +1,30 @@
 "use strict";
-$(document).ready(function() {
-  var controller = new ScrollMagic.Controller();
+var controller = new ScrollMagic.Controller();
 
-  // Navigation 
-  var innerDistance = $('.portfolio-case__logo').position().top / 2;
+// Navigation
+var headerTween = new TweenLite.from('.portfolio-case__header--min__content', .150, { autoAlpha: 0, y: -40 });
 
-  new ScrollMagic.Scene()
-    .triggerElement(".portfolio-case__header--min-top")
-    .triggerHook("onLeave")
-    .setClassToggle('.portfolio-case__header--min', 'is-visible')
-    .on('start', function() {
-      $('.portfolio-case__header--min h1, .portfolio-case__header--min svg').slideToggle(150);
+var header = new ScrollMagic.Scene({
+  offset: -20,
+  triggerElement: '.portfolio-case__header--min',
+  triggerHook: 'onLeave'
+})
+  .setTween(headerTween)
+  .addTo(controller);
+
+// Portfolio videos play on enter
+function playVideos() {
+  var videoElements = document.getElementsByClassName('portfolio-video');
+
+  for (var i=0; i<videoElements.length; i++) {
+    var videoScene = new ScrollMagic.Scene({
+      triggerElement: videoElements[i],
+      triggerHook: 'onEnter'
     })
-  .addTo(controller); 
-
-  // Portfolio videos play on enter
-  $('.portfolio-video').each(function() {
-    var videoScene = new ScrollMagic.Scene()
-      .triggerElement(this)
-      .triggerHook('onEnter')
       .on('enter', function(e) {
         e.target.triggerElement().play();
       })
       .addTo(controller);
-  });
-});
+  }
+}
+playVideos();

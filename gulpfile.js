@@ -183,7 +183,7 @@ function jsVendor() {
   return src([
       // 'node_modules/jquery/dist/jquery.js',
       // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-      'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+      'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
       'node_modules/ionicons/dist/ionicons.js',
       'src/assets/vendor/js/*',
     ])
@@ -272,7 +272,7 @@ function concatScripts() {
       'dist/assets/vendor/js/jquery.js',
       // 'dist/assets/vendor/js/popper.js',
       // 'dist/assets/vendor/js/bootstrap.js',
-      'dist/assets/vendor/js/ScrollMagic.min.js',
+      'dist/assets/vendor/js/ScrollMagic.js',
       'dist/assets/vendor/js/ionicons.js',
 
       'dist/assets/js/*'

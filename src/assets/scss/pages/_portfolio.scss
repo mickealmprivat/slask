@@ -60,21 +60,13 @@ $case-brand-height: 60px;
             z-index: 1000;
 
             .portfolio-case__logo {
-                display: none;
                 max-height: 40px;
                 margin-right: 24px;
             }
-            h1 { 
-                display: none;
+            h1 {
+                display: inline-block;
                 font-size: 20px; 
                 font-weight: 300;
-            }
-
-            &-top {
-                display: block;
-                height: 0;
-                position: relative;
-                top: -$nav-height;
             }
         }
     }
@@ -121,7 +113,7 @@ $case-brand-height: 60px;
 .portfolio-case__header {
     &[data-brand="Mr Green"],
     &--min[data-brand="Mr Green"] {
-        background: #144C2C;
+        background: #18723c;
         color: #fff;
     }
 }
