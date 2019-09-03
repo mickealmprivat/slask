@@ -25,15 +25,37 @@ $case-brand-height: 60px;
         height: calc(100vh - #{$nav-height});
         z-index: 1000;
 
-        .container { height: 100%; }
-        .media { height: 100%; align-items: center; }
+        .container {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            max-width: 1000px;
+            height: 100%;
+
+            @media( max-width: 768px ) {
+                & {
+                    flex-direction: column;
+                }
+            }
+        }
+        &__item {
+            flex: 1;
+        }
 
         .portfolio-case__logo {
             margin-right: 70px;
             max-width: 250px;
-            transform: scale(1);
-            transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            width: 100%;
+
+            @media( max-width: 768px ) {
+                & { 
+                    margin-right: 0; 
+                    padding-top: 3rem;
+                }
+            }
+            
+            svg {
+                width: 100%;
+            }
         }
         hgroup {
             h1, h2, h3 { margin: 0; }
