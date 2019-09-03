@@ -70,13 +70,15 @@ $case-brand-height: 60px;
             }
         }
     }
-    .media img { max-width: 500px; }
-}
-.portfolio-mobile-screen {
-    @extend .shadow;
-
-    height: auto;
-    max-width: 225px;
+    .media img {
+        height: auto;
+        max-width: 500px;
+        
+        &.portfolio-mobile-screen {
+            @extend .shadow;
+            max-width: 225px;
+        }
+    }
 }
 
 .phone {
