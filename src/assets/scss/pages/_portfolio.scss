@@ -70,6 +70,7 @@ $case-brand-height: 60px;
             }
         }
     }
+    .media img { max-width: 500px; }
 }
 .portfolio-mobile-screen {
     @extend .shadow;
