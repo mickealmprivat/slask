@@ -164,6 +164,13 @@ $case-brand-height: 60px;
             z-index: 2;
         }
 
+        &--previous {
+            &::before {
+                background: lighten($journey-color, 10%);
+                opacity: .9;
+            }
+        }
+
         &--current {
             $point-size: 40px;
 
