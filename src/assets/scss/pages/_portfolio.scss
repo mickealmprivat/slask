@@ -70,14 +70,20 @@ $case-brand-height: 60px;
             }
         }
     }
-    .media img {
-        height: auto;
-        max-width: 500px;
-        
-        &.portfolio-mobile-screen {
-            @extend .shadow;
-            max-width: 225px;
-        }
+}
+.portfolio-mo-image {
+    margin: 0 auto;
+
+    &.mt {
+        margin-top: 48px;
+    }
+}
+img.portfolio-mo-image {
+    max-width: 225px;
+    @extend .shadow;
+
+    &--large {
+        max-width: 400px;
     }
 }
 

@@ -23,3 +23,7 @@
         [name="logo-linkedin"] { color: rgb(0, 119, 181); }
     }
 }
+
+@media (max-width: small) {
+    body { background: red; }
+}
