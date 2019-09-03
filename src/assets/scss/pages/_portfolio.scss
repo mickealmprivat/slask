@@ -7,17 +7,13 @@ $case-brand-height: 60px;
 .portfolio-case {
     section {
         margin: 3rem 0;
-        padding: 3rem 0;
+        padding: 5rem 0;
     }
     .secondary-info {
         h2, h3 { line-height: 48px; }
         p { font-size: 18px; }
     }
     
-    .media-body p:first-of-type {
-        @extend .text-large;
-    }
-
     aside {
         border: 1px solid;
         font-size: 16px;
@@ -59,14 +55,18 @@ $case-brand-height: 60px;
             width: 100%;
             z-index: 1000;
 
-            .portfolio-case__logo {
-                max-height: 40px;
+            $svg-height: 40px;
+
+            svg {
+                max-height: $svg-height;
                 margin-right: 24px;
             }
             h1 {
                 display: inline-block;
                 font-size: 20px; 
                 font-weight: 300;
+                line-height: $svg-height;
+                margin: 0;
             }
         }
     }
@@ -115,11 +115,13 @@ $case-brand-height: 60px;
     &--min[data-brand="Mr Green"] {
         background: #18723c;
         color: #fff;
+
+        svg { fill: #fff; }
     }
 }
 .user-journey { 
-    path { fill: #55BA64; }
-    circle, text { fill: #1F7C47; }
+    path { fill: rgb(42, 49, 57); }
+    circle, text { fill: rgb(42, 49, 57); }
 }
 
 // .onboarding {
