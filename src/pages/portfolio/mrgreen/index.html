@@ -30,14 +30,15 @@ description: Micke Alm UX portfolio case study of Mr Green's swedish deposit lim
 			<div class="row">
 				<div class="col-sm-7">
 					<h1>Challenge</h1>
-					<p>In January of 2019, Sweden became a regulated gambling market under the Swedish Gambling Authority (Spelinspektionen), putting several responsible gambling laws in place. One of these requires all players to set deposit limits, which happens either on log-in or registration. This law is great as it forces the player to think about their gambling habits and hopefully leads to greater player protection, but a few months after our initial release, it became clear that players were setting incorrect limits, leading to lots of player frustration, customer support contacts, and loss of revenue.</p>
+					<p>In January of 2019, Sweden became a regulated gambling market under the Swedish Gambling Authority (Spelinspektionen), putting several responsible gambling laws in place. One of these requires all players to set deposit limits, which happens either on log-in or registration.</p>
+					<p>This law is great as it forces the player to think about their gambling habits and hopefully leads to greater player protection, but a few months after our initial release, it became clear that players were setting incorrect limits, leading to lots of player frustration, customer support contacts, and loss of revenue.</p>
 				</div>
 				<div class="col-sm-5 secondary-info">
 					<h3>About Mr Green</h3>
 					<p><a href="http://www.mrgreen.com" target="_blank" rel="noreferrer" title="Mr Green website">Mr Green</a> is a leading operator in the iGaming market, known for its focus on responsible gambling and player safety via its <a href="https://www.mrgreen.com/greengaming/" title="Mr Green Green Gaming" target="_blank" rel="noreferer">Green Gaming</a> product.</p>
 					<h3>My role</h3>
-					<p>As UX Chapter Lead, I also worked in the Green Gaming team as their dedicated designer. The project required close collaboration with both C-Level and country managers, as well as our Product Owner, <a href="https://www.linkedin.com/in/saratyche/" rel="noreferrer" title="Sara Tyche LinkedIn" target="_blank">Sara Tyche</a> and front-end developer, <a href="https://www.linkedin.com/in/johniehjelm/" title="Johnie Hjelm LinkedIn" rel="noreferrer" target="_blank">Johnie Hjelm</a>.</p>
 					<p>I handled all parts of the UX work with the help of our Lead Researcher, <a href="https://www.linkedin.com/in/kamillaliljedahl/" title="Kamilla Liljedahl LinkedIn" rel="noreferrer" target="_blank">Kamilla Liljedahl</a>.</p>
+					<p>The project required close collaboration with both C-Level and country managers, as well as our Product Owner, <a href="https://www.linkedin.com/in/saratyche/" rel="noreferrer" title="Sara Tyche LinkedIn" target="_blank">Sara Tyche</a>, and front-end developer, <a href="https://www.linkedin.com/in/johniehjelm/" title="Johnie Hjelm LinkedIn" rel="noreferrer" target="_blank">Johnie Hjelm</a>.</p>
 				</div>	
 			</div>
 		</div>
@@ -93,7 +94,12 @@ description: Micke Alm UX portfolio case study of Mr Green's swedish deposit lim
 				<div class="media-body">
 					<p>As my research had shown, players had trouble understanding how limits work, and to be honest, it’s sometimes difficult for us to even explain it.</p>
 					<p>I tried a number of in-page options, but the information was too dense, and I found that people skipped over reading it anyhow. I then struck upon the idea of going the opposite direction and instead giving the information center stage as its own little ‘feature’, and sketched out ‘The Intermission’ as it became known.</p>
-					<svg  viewbox="0 0 1140 90" xmlns="http://www.w3.org/2000/svg" class="user-journey mt-5"><g fill="none" fill-rule="evenodd"><path fill="#00AEB3" d="M400 26h740v5H400z"/><path fill="#8DD9DB" d="M0 26h400v5H0z"/><circle fill="#8DD9DB" cx="121.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="413.5" cy="28.5" r="28.5"/><circle fill="#00AEB3" cx="706.5" cy="28.5" r="21.5"/><circle fill="#00AEB3" cx="998.5" cy="28.5" r="21.5"/><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="79.412" y="68">Registration</tspan></text><text font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" fill="#00AEB3"><tspan x="358.445" y="80">Limit setting</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="677.976" y="68">Deposit</tspan></text><text font-family="Lato-Regular, Lato" font-size="16" fill="#00AEB3"><tspan x="982.828" y="68">Play</tspan></text></g></svg> 
+					<div class="user-journey">
+						<div class="user-journey__point">Log in / Registration</div>
+						<div class="user-journey__point user-journey__point--current">Limit setting</div>
+						<div class="user-journey__point">Deposit</div>
+						<div class="user-journey__point">Play</div>
+					</div>
 					<p class="text-center text-small mb-5">User journey</p>
 					<p>At this point the user is most likely coming directly from having registered, and we now need to have them go through more input controls. I figured we could ‘reset’ them a little from input fatigue, by letting the information break off visually and take over the entire screen, which met with approval from the entire team and I then let that concept grow.</p>
 					<p>I defined the rules I wanted to explain to the player, and sketched some ideas out on paper to see what made sense. I quickly fell upon the concept of adding animation as a visual aid, as well as bringing some levity into what would otherwise be a pure text screen, which in turn grew the intermission into several separate screens and a complete onboarding flow.</p>
@@ -107,7 +113,7 @@ description: Micke Alm UX portfolio case study of Mr Green's swedish deposit lim
 	</section>
 	
 	<section id="animation">
-		<div class="container mb-5">
+		<div class="container mb-6">
 			<div class="media">
 				<div class="phone mt-5 mr-5">
 					<video class="portfolio-video" muted loop playsinline>
@@ -129,9 +135,13 @@ description: Micke Alm UX portfolio case study of Mr Green's swedish deposit lim
 			<h2>Handover</h2>
 			<p>The best developer hand-over for animation is almost always in code, rather than a video produced in Studio or After Effects. Instead of having to document easings and timings, it's right there on the page for them. So I brought up a new Pen and produced the animation to be easily adapted to whatever triggers our code stack might provide.</p>
 			
-			<small>Click the respective 'Activate' links</small>
-			<p class="codepen" data-show-tab-bar='no' data-height="386" data-theme-id="0" data-default-tab="result" data-user="mickealm" data-slug-hash="mYbbPG" style="height: 386px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Limits animation">
+			<p class="codepen mt-5" data-show-tab-bar='no' data-height="349" data-theme-id="0" data-default-tab="result" data-user="mickealm" data-slug-hash="WNepyOW" style="height: 349px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Limits animation">
+			<span>See the Pen <a href="https://codepen.io/mickealm/pen/WNepyOW/">
+			Limits animation</a> by Mikael Alm (<a href="https://codepen.io/mickealm">@mickealm</a>)
+			on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
 			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			<p class="text-center text-small">Click the respective 'Activate' buttons</p>
 		</div>
 	</section>
 

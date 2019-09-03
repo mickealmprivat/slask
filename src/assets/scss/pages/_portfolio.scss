@@ -122,16 +122,60 @@ $case-brand-height: 60px;
         svg { fill: #fff; }
     }
 }
-.user-journey { 
-    path { fill: rgb(42, 49, 57); }
-    circle, text { fill: rgb(42, 49, 57); }
-}
+.user-journey {
+    $journey-color: rgb(40, 84, 106);
+    
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
 
-// .onboarding {
-//     background: #1997a2;
-//     color: #fff;
-// }
-// .limits {
-//     background: #a21970;
-//     color: #fff;
-// }
+    &::before {
+        background: $journey-color;
+        content: " ";
+        height: 3px;
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    $point-size: 30px;
+    &__point {
+        font-size: 14px;
+        padding-top: $point-size + 30;
+        position: relative;
+        text-align: center;
+
+        &::before {
+            background: $journey-color;
+            border-radius: 100%;
+            content: " ";
+            display: block;
+            height: $point-size;
+            left: 50%;
+            margin-top: -$point-size/2;
+            margin-left: -$point-size/2;
+            position: absolute;
+            top: 50%;
+            width: $point-size;
+            z-index: 2;
+        }
+
+        &--current {
+            $point-size: 40px;
+
+            font-size: 16px;
+            padding-top: $point-size + 25;
+
+            &::before {
+                height: $point-size;
+                margin-top: -$point-size/2;
+                margin-left: -$point-size/2;
+                width: $point-size;
+            }
+        }
+    }
+}
