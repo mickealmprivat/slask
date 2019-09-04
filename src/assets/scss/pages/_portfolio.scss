@@ -166,7 +166,7 @@ img.portfolio-mo-image {
 
     video {
         background-size: fill;
-        clip-path: url(#iphone-screen);
+        mask: url('/assets/img/iphone-screen.svg#iphone-screen');
         display: block;
         max-height: 470px;
         max-width: 216px;
