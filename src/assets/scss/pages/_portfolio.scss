@@ -7,7 +7,23 @@ $case-brand-height: 60px;
 .portfolio-case {
     section {
         margin: 3rem 0;
-        padding: 5rem 0;
+        padding: 2rem;
+
+        $colored-padding: 5rem 0;        
+        &.dark {
+            background-color: #1A1E23;
+            color: #F3F5F6;
+            padding: $colored-padding;
+        
+            aside {
+                background-color: rgb(55, 66, 79);
+                border-color: rgb(67, 79, 95);
+            }
+        }
+        &.light-grey { 
+            background-color: #F4F6F7;
+            padding: $colored-padding;
+        }
     }
     .secondary-info {
         h2, h3 { line-height: 48px; }
@@ -32,7 +48,7 @@ $case-brand-height: 60px;
             max-width: 1000px;
             height: 100%;
 
-            @media( max-width: 768px ) {
+            @media( max-width: 768px) {
                 & {
                     flex-direction: column;
                 }
@@ -46,10 +62,26 @@ $case-brand-height: 60px;
             margin-right: 70px;
             max-width: 250px;
 
-            @media( max-width: 768px ) {
+            @include media-breakpoint-down(md) {
                 & { 
-                    margin-right: 0; 
+                    display: flex;
+                    margin: 0 auto; 
                     padding-top: 3rem;
+
+                    svg {
+                        align-self: flex-end;
+                        margin-bottom: 2rem;
+                        max-width: 200px;
+                    }
+                }
+            }
+            
+            @include media-breakpoint-only(md) {
+                & {
+                    svg {
+                        margin-bottom: 2rem;
+                        max-width: 300px;
+                    }
                 }
             }
             
@@ -90,6 +122,16 @@ $case-brand-height: 60px;
                 line-height: $svg-height;
                 margin: 0;
             }
+
+            @include media-breakpoint-down(md) {
+                height: 50px; 
+
+                svg { 
+                    margin-right: 15px;
+                    max-height: 25px;
+                }
+                h1 { line-height: 25px; }
+            }
         }
     }
 }
@@ -106,6 +148,11 @@ img.portfolio-mo-image {
 
     &--large {
         max-width: 400px;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin: 1rem 0 !important;
+        max-width: 100%;
     }
 }
 
@@ -127,17 +174,6 @@ img.portfolio-mo-image {
     }
 }
 
-
-.dark {
-    background-color: #1A1E23;
-    color: #F3F5F6;
-
-    aside {
-        background-color: rgb(55, 66, 79);
-        border-color: rgb(67, 79, 95);
-    }
-}
-.light-grey { background-color: #F4F6F7; }
 
 // Mr Green
 // -----------------------------------------------------------------------------
