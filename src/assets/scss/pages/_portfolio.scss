@@ -7,7 +7,7 @@ $case-brand-height: 60px;
 .portfolio-case {
     section {
         margin: 3rem 0;
-        padding: 2rem;
+        padding: 2rem 0;
 
         $colored-padding: 5rem 0;        
         &.dark {
@@ -230,8 +230,7 @@ img.portfolio-mo-image {
 
         &--previous {
             &::before {
-                background: lighten($journey-color, 10%);
-                opacity: .9;
+                background: #497e9a;
             }
         }
 
