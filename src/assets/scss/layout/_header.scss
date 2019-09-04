@@ -20,6 +20,14 @@
     &--contact {
         font-size: 24px;
 
+        a {
+            color: $text-color;
+
+            &:hover {
+                color: $brand-color;
+            }
+        }
+
         [name="logo-linkedin"] { color: rgb(0, 119, 181); }
     }
 }
