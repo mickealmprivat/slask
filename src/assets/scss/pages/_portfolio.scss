@@ -173,6 +173,26 @@ img.portfolio-mo-image {
         z-index: 1;
     }
 }
+.result {
+    &-row {
+        h4 { 
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+    }
+    &-item {
+        color: #55BA64;
+        font-size: 40px;
+        font-weight: 400;
+        vertical-align: middle;
+
+        ion-icon {
+            font-size: 32px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
 
 
 // Mr Green
