@@ -194,78 +194,95 @@ img.portfolio-mo-image {
     }
 }
 
+.thanks h1 {
+    font-family: 'Yellowtail', cursive;
+    font-size: 90px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 45px;
+    }
+
+}
+
 
 // Mr Green
 // -----------------------------------------------------------------------------
-.portfolio-case__header {
-    &[data-brand="Mr Green"],
-    &--min[data-brand="Mr Green"] {
-        background: #18723c;
-        color: #fff;
+[data-brand="Mr Green"] {
+    $brand-color: #18723c;
 
-        svg { fill: #fff; }
-    }
-}
-.user-journey {
-    $journey-color: rgb(40, 84, 106);
-    
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    position: relative;
-    width: 100%;
+    .portfolio-case__header {
+        &,
+        &--min {
+            background: $brand-color;
+            color: #fff;
 
-    &::before {
-        background: $journey-color;
-        content: " ";
-        height: 3px;
-        margin-top: -1px;
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        z-index: 1;
+            svg { fill: #fff; }
+        }
     }
 
-    $point-size: 30px;
-    &__point {
-        font-size: 14px;
-        padding-top: $point-size + 30;
+    .user-journey {
+        $journey-color: rgb(40, 84, 106);
+        
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
         position: relative;
-        text-align: center;
+        width: 100%;
 
         &::before {
             background: $journey-color;
-            border-radius: 100%;
             content: " ";
-            display: block;
-            height: $point-size;
-            left: 50%;
-            margin-top: -$point-size/2;
-            margin-left: -$point-size/2;
+            height: 3px;
+            margin-top: -1px;
             position: absolute;
             top: 50%;
-            width: $point-size;
-            z-index: 2;
+            width: 100%;
+            z-index: 1;
         }
 
-        &--previous {
-            &::before {
-                background: #497e9a;
-            }
-        }
-
-        &--current {
-            $point-size: 40px;
-
-            font-size: 16px;
-            padding-top: $point-size + 25;
+        $point-size: 30px;
+        &__point {
+            font-size: 14px;
+            padding-top: $point-size + 30;
+            position: relative;
+            text-align: center;
 
             &::before {
+                background: $journey-color;
+                border-radius: 100%;
+                content: " ";
+                display: block;
                 height: $point-size;
+                left: 50%;
                 margin-top: -$point-size/2;
                 margin-left: -$point-size/2;
+                position: absolute;
+                top: 50%;
                 width: $point-size;
+                z-index: 2;
+            }
+
+            &--previous {
+                &::before {
+                    background: #497e9a;
+                }
+            }
+
+            &--current {
+                $point-size: 40px;
+
+                font-size: 16px;
+                padding-top: $point-size + 25;
+
+                &::before {
+                    height: $point-size;
+                    margin-top: -$point-size/2;
+                    margin-left: -$point-size/2;
+                    width: $point-size;
+                }
             }
         }
     }
+    .thanks { color: $brand-color; }
+    
 }
