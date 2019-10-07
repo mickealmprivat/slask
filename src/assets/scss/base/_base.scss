@@ -30,7 +30,7 @@ a {
   text-decoration: underline;
 
   @include on-event {
-    color: $text-color;
+    color: $brand-color-dark;
     text-decoration: underline;
     transition: all .2s;
   }
