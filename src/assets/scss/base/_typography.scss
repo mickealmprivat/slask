@@ -9,10 +9,19 @@
     color: $text-color;
     font: normal 100% / 1.4 $text-font-stack;
   }
-  p {
+  
+  main {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.5;
+  }
+
+  .subheader {
+    font-weight: 200;
+  }
+  .section-header {
+    color: #757575;
+    font-weight: 200;
   }
   .text {
     &-large {
@@ -20,5 +29,19 @@
     }
     &-small {
       font-size: 14px;
+    }
+  }
+
+  hr {
+    border-top-color: $brand-color;
+    height: 1px;
+  }
+
+  .no-list {
+    &,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
   }

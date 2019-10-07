@@ -1,3 +1,45 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.profile-photo {
+    $size: 254px;
+
+    background: $brand-color;
+    border-radius: 100%;
+    height: $size;
+    width: $size;
+    padding: 2px;
+
+    img {
+        border: 5px solid #fff;
+        border-radius: 100%;
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin: 0 auto;
+    }
+}
+
+
+.employment-list {
+    .row {
+        margin-bottom: 1em;
+    }
+}
+
+.company, .title { display: block; }
+
+.company {
+    font-size: 18px;
+}
+.title {
+    font-size: 22px;
+    font-weight: 400;
+}
+.date {
+    font-size: 16px;
+}
