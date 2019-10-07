@@ -5,8 +5,10 @@
     height: $nav-height;
     padding: 10px;
 
+    .nav-logo { margin: 0 auto; }
+    
     svg {
-        max-height: 50px;
+        height: 70px;
     }
 }
 

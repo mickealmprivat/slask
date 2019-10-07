@@ -5,6 +5,24 @@
 $case-brand-height: 60px;
 
 .portfolio-case {
+    .back {
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        text-decoration: none;
+        top: 24px;
+        left: 0;
+
+        ion-icon {
+            position: relative;
+            top: 4px;
+        }
+
+        @include on-event {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
     section {
         margin: 3rem 0;
         padding: 2rem 0;
@@ -47,6 +65,7 @@ $case-brand-height: 60px;
             justify-content: center;
             max-width: 1000px;
             height: 100%;
+            position: relative;
 
             @media( max-width: 768px) {
                 & {
@@ -208,7 +227,7 @@ img.portfolio-mo-image {
 // Mr Green
 // -----------------------------------------------------------------------------
 [data-brand="Mr Green"] {
-    $brand-color: #18723c;
+    $brand-color: $mrgreen;
 
     .portfolio-case__header {
         &,
