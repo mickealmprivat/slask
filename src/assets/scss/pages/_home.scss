@@ -80,6 +80,10 @@
             color: #fff;
             text-decoration: none;
         }
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
     }
 
     .no-list li { margin-bottom: 4px; }

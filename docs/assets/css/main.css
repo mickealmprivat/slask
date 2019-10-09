@@ -7,6 +7,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Lato:200,300,400&display=swap");
 /* line 13, src/assets/scss/vendors/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -10267,7 +10268,7 @@ button.bg-dark:focus {
 }
 
 /* line 4, node_modules/bootstrap/scss/utilities/_shadows.scss */
-.shadow {
+.shadow, img.portfolio-mo-image {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
@@ -13034,9 +13035,9 @@ html {
           box-sizing: border-box;
 }
 
-/* line 13, src/assets/scss/base/_base.scss */
+/* line 11, src/assets/scss/base/_base.scss */
 body {
-  padding-top: 70px;
+  padding-bottom: 3rem;
 }
 
 /**
@@ -13045,7 +13046,7 @@ body {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-/* line 24, src/assets/scss/base/_base.scss */
+/* line 20, src/assets/scss/base/_base.scss */
 *,
 *::before,
 *::after {
@@ -13056,15 +13057,15 @@ body {
 /**
  * Basic styles for links
  */
-/* line 33, src/assets/scss/base/_base.scss */
+/* line 29, src/assets/scss/base/_base.scss */
 a {
-  color: #e50050;
-  text-decoration: none;
+  color: #00aab0;
+  text-decoration: underline;
 }
 
-/* line 17, src/assets/scss/abstracts/_mixins.scss */
+/* line 23, src/assets/scss/abstracts/_mixins.scss */
 a:hover, a:active, a:focus {
-  color: #222222;
+  color: #008186;
   text-decoration: underline;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -13080,7 +13081,49 @@ a:hover, a:active, a:focus {
 /* line 8, src/assets/scss/base/_typography.scss */
 body {
   color: #222222;
-  font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 100%/1.4 "Lato", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/* line 13, src/assets/scss/base/_typography.scss */
+main {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* line 19, src/assets/scss/base/_typography.scss */
+.subheader {
+  font-weight: 200;
+}
+
+/* line 22, src/assets/scss/base/_typography.scss */
+.section-header {
+  color: #757575;
+  font-weight: 200;
+}
+
+/* line 27, src/assets/scss/base/_typography.scss */
+.text-large {
+  font-size: 24px;
+}
+
+/* line 30, src/assets/scss/base/_typography.scss */
+.text-small {
+  font-size: 14px;
+}
+
+/* line 35, src/assets/scss/base/_typography.scss */
+hr {
+  border-top-color: #00aab0;
+  height: 1px;
+}
+
+/* line 41, src/assets/scss/base/_typography.scss */
+.no-list,
+.no-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -13146,25 +13189,656 @@ body {
   width: 1px;
 }
 
-/* line 4, src/assets/scss/layout/_header.scss */
-.navbar {
-  padding: .5rem 2rem;
+/* line 57, src/assets/scss/base/_helpers.scss */
+.mb-6 {
+  margin-bottom: 5rem !important;
 }
 
-/* line 8, src/assets/scss/layout/_header.scss */
+/* line 60, src/assets/scss/base/_helpers.scss */
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+/* line 4, src/assets/scss/layout/_header.scss */
+.navbar {
+  padding: 10px;
+}
+
+/* line 7, src/assets/scss/layout/_header.scss */
+.navbar .nav-logo {
+  margin: 0 auto;
+}
+
+/* line 9, src/assets/scss/layout/_header.scss */
+.navbar svg {
+  height: 70px;
+}
+
+/* line 16, src/assets/scss/layout/_header.scss */
 .fixed-top {
   border-bottom: 1px solid #f1f1f1;
 }
 
-/* line 12, src/assets/scss/layout/_header.scss */
-.nav-link,
-.dropdown-item {
-  font-weight: 700;
+/* line 21, src/assets/scss/layout/_header.scss */
+.navbar-section--contact {
+  font-size: 24px;
+}
+
+/* line 24, src/assets/scss/layout/_header.scss */
+.navbar-section--contact a {
+  color: #222222;
+}
+
+/* line 27, src/assets/scss/layout/_header.scss */
+.navbar-section--contact a:hover {
+  color: #00aab0;
+}
+
+/* line 32, src/assets/scss/layout/_header.scss */
+.navbar-section--contact [name="logo-linkedin"] {
+  color: #0077b5;
+}
+
+@media (max-width: small) {
+  /* line 37, src/assets/scss/layout/_header.scss */
+  body {
+    background: red;
+  }
 }
 
 /* line 4, src/assets/scss/layout/_footer.scss */
 .footer {
   border-top: 1px solid #f1f1f1;
+}
+
+/* line 5, src/assets/scss/pages/_home.scss */
+.card {
+  background: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  padding: 24px;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  top: 40px;
+}
+
+/* line 17, src/assets/scss/pages/_home.scss */
+.card h1 {
+  font-size: 28px;
+}
+
+/* line 18, src/assets/scss/pages/_home.scss */
+.card h2 {
+  font-size: 18px;
+}
+
+/* line 20, src/assets/scss/pages/_home.scss */
+.card ul {
+  text-align: left;
+}
+
+/* line 22, src/assets/scss/pages/_home.scss */
+.card ion-icon {
+  color: #008186;
+}
+
+/* line 26, src/assets/scss/pages/_home.scss */
+.card--max-width {
+  cursor: pointer;
+  max-width: 380px;
+  height: 400px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 991.98px) {
+  /* line 26, src/assets/scss/pages/_home.scss */
+  .card--max-width {
+    height: 400px;
+  }
+}
+
+/* line 38, src/assets/scss/pages/_home.scss */
+.card--max-width:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* line 41, src/assets/scss/pages/_home.scss */
+.card--max-width:hover .card__link {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* line 45, src/assets/scss/pages/_home.scss */
+.card--right {
+  margin: 0 0 1.5rem auto;
+}
+
+/* line 50, src/assets/scss/pages/_home.scss */
+.card--portfolio svg {
+  max-height: 254px;
+  margin: 0 auto 1.5rem;
+}
+
+/* line 55, src/assets/scss/pages/_home.scss */
+.card--portfolio h1 {
+  font-size: 28px;
+}
+
+/* line 56, src/assets/scss/pages/_home.scss */
+.card--portfolio h2 {
+  font-size: 20px;
+}
+
+/* line 59, src/assets/scss/pages/_home.scss */
+.card__link {
+  background: #008186;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  height: 100%;
+  left: 0;
+  line-height: 50px;
+  opacity: .9;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+}
+
+/* line 23, src/assets/scss/abstracts/_mixins.scss */
+.card__link:hover, .card__link:active, .card__link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 85, src/assets/scss/pages/_home.scss */
+.card .no-list li {
+  margin-bottom: 4px;
+}
+
+/* line 87, src/assets/scss/pages/_home.scss */
+.card[data-brand="Mr Green"] {
+  background: #1f7c47;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #1f7c47), to(#144c2c));
+  background: linear-gradient(180deg, #1f7c47 50%, #144c2c 100%);
+  color: #fff;
+}
+
+/* line 92, src/assets/scss/pages/_home.scss */
+.card[data-brand="Mr Green"] .card__link {
+  background: #144C2C;
+}
+
+/* line 96, src/assets/scss/pages/_home.scss */
+.profile-photo {
+  background: #00aab0;
+  border-radius: 100%;
+  height: 254px;
+  margin: 0 auto 1.5rem;
+  width: 254px;
+  padding: 2px;
+}
+
+/* line 106, src/assets/scss/pages/_home.scss */
+.profile-photo img {
+  border: 5px solid #fff;
+  border-radius: 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  /* line 96, src/assets/scss/pages/_home.scss */
+  .profile-photo {
+    margin: 0 auto;
+  }
+}
+
+/* line 120, src/assets/scss/pages/_home.scss */
+.employment-list .row {
+  margin-bottom: 1em;
+}
+
+/* line 125, src/assets/scss/pages/_home.scss */
+.company, .title {
+  display: block;
+}
+
+/* line 127, src/assets/scss/pages/_home.scss */
+.company {
+  font-size: 18px;
+}
+
+/* line 130, src/assets/scss/pages/_home.scss */
+.title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* line 134, src/assets/scss/pages/_home.scss */
+.date {
+  font-size: 16px;
+}
+
+/* line 8, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case .back {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  text-decoration: none;
+  top: 24px;
+  left: 0;
+}
+
+/* line 16, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case .back ion-icon {
+  position: relative;
+  top: 4px;
+}
+
+/* line 23, src/assets/scss/abstracts/_mixins.scss */
+.portfolio-case .back:hover, .portfolio-case .back:active, .portfolio-case .back:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 26, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case section {
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+/* line 31, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case section.dark {
+  background-color: #1A1E23;
+  color: #F3F5F6;
+  padding: 5rem 0;
+}
+
+/* line 36, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case section.dark aside {
+  background-color: #37424f;
+  border-color: #434f5f;
+}
+
+/* line 41, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case section.light-grey {
+  background-color: #F4F6F7;
+  padding: 5rem 0;
+}
+
+/* line 47, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case .secondary-info h2, .portfolio-case .secondary-info h3 {
+  line-height: 48px;
+}
+
+/* line 48, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case .secondary-info p {
+  font-size: 18px;
+}
+
+/* line 51, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case aside {
+  border: 1px solid;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  padding: 16px;
+}
+
+/* line 58, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header {
+  height: calc(100vh - 72px);
+  z-index: 1000;
+}
+
+/* line 62, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1000px;
+  height: 100%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  /* line 71, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 76, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* line 80, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header .portfolio-case__logo {
+  margin-right: 70px;
+  max-width: 250px;
+}
+
+@media (max-width: 991.98px) {
+  /* line 85, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header .portfolio-case__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+  /* line 90, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header .portfolio-case__logo svg {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 2rem;
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* line 100, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header .portfolio-case__logo svg {
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+}
+
+/* line 107, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header .portfolio-case__logo svg {
+  width: 100%;
+}
+
+/* line 112, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header hgroup h1, .portfolio-case__header hgroup h2, .portfolio-case__header hgroup h3 {
+  margin: 0;
+}
+
+/* line 113, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header hgroup h1 {
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* line 114, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header hgroup h2, .portfolio-case__header hgroup h3 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* line 115, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header hgroup h2 {
+  font-weight: 400;
+}
+
+/* line 116, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header hgroup h3 {
+  font-weight: 300;
+}
+
+/* line 120, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header--min {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* line 133, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header--min svg {
+  max-height: 40px;
+  margin-right: 24px;
+}
+
+/* line 137, src/assets/scss/pages/_portfolio.scss */
+.portfolio-case__header--min h1 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  /* line 120, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header--min {
+    height: 50px;
+  }
+  /* line 148, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header--min svg {
+    margin-right: 15px;
+    max-height: 25px;
+  }
+  /* line 152, src/assets/scss/pages/_portfolio.scss */
+  .portfolio-case__header--min h1 {
+    line-height: 25px;
+  }
+}
+
+/* line 157, src/assets/scss/pages/_portfolio.scss */
+.portfolio-mo-image {
+  margin: 0 auto;
+}
+
+/* line 160, src/assets/scss/pages/_portfolio.scss */
+.portfolio-mo-image.mt {
+  margin-top: 48px;
+}
+
+/* line 164, src/assets/scss/pages/_portfolio.scss */
+img.portfolio-mo-image {
+  max-width: 225px;
+}
+
+/* line 168, src/assets/scss/pages/_portfolio.scss */
+img.portfolio-mo-image--large {
+  max-width: 400px;
+}
+
+@media (max-width: 991.98px) {
+  /* line 164, src/assets/scss/pages/_portfolio.scss */
+  img.portfolio-mo-image {
+    margin: 1rem 0 !important;
+    max-width: 100%;
+  }
+}
+
+/* line 178, src/assets/scss/pages/_portfolio.scss */
+.phone {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("/assets/img/iphone.png") center center no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 500px;
+  width: 248px;
+}
+
+/* line 186, src/assets/scss/pages/_portfolio.scss */
+.phone video {
+  background-size: fill;
+  -webkit-mask: url("/assets/img/iphone-screen.svg#iphone-screen");
+          mask: url("/assets/img/iphone-screen.svg#iphone-screen");
+  display: block;
+  max-height: 470px;
+  max-width: 216px;
+  z-index: 1;
+}
+
+/* line 197, src/assets/scss/pages/_portfolio.scss */
+.result-row h4 {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* line 202, src/assets/scss/pages/_portfolio.scss */
+.result-item {
+  color: #55BA64;
+  font-size: 40px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+/* line 208, src/assets/scss/pages/_portfolio.scss */
+.result-item ion-icon {
+  font-size: 32px;
+  position: relative;
+  top: 2px;
+}
+
+/* line 216, src/assets/scss/pages/_portfolio.scss */
+.thanks h1 {
+  font-family: 'Yellowtail', cursive;
+  font-size: 90px;
+}
+
+@media (max-width: 767.98px) {
+  /* line 216, src/assets/scss/pages/_portfolio.scss */
+  .thanks h1 {
+    font-size: 45px;
+  }
+}
+
+/* line 233, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .portfolio-case__header, [data-brand="Mr Green"] .portfolio-case__header--min {
+  background: #18723c;
+  color: #fff;
+}
+
+/* line 238, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .portfolio-case__header svg, [data-brand="Mr Green"] .portfolio-case__header--min svg {
+  fill: #fff;
+}
+
+/* line 242, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+
+/* line 251, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey::before {
+  background: #28546a;
+  content: " ";
+  height: 3px;
+  margin-top: -1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 263, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey__point {
+  font-size: 14px;
+  padding-top: 60px;
+  position: relative;
+  text-align: center;
+}
+
+/* line 269, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey__point::before {
+  background: #28546a;
+  border-radius: 100%;
+  content: " ";
+  display: block;
+  height: 30px;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  z-index: 2;
+}
+
+/* line 285, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey__point--previous::before {
+  background: #497e9a;
+}
+
+/* line 290, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey__point--current {
+  font-size: 16px;
+  padding-top: 65px;
+}
+
+/* line 296, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .user-journey__point--current::before {
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  width: 40px;
+}
+
+/* line 305, src/assets/scss/pages/_portfolio.scss */
+[data-brand="Mr Green"] .thanks {
+  color: #18723c;
 }
 
 /*# sourceMappingURL=../../../scss */

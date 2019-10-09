@@ -21,11 +21,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Micke Alm - product and UX designer portfolio and consultant profile">
+    <meta name="description" content>
 
     <meta property="og:title" content=" Micke Alm">
     <meta property="og:image" content="assets/img/og-image.png">
-    <meta property="og:description" content="Micke Alm - product and UX designer portfolio and consultant profile">
+    <meta property="og:description" content>
     <meta property="og:url" content="https://www.mickealm.se/">
 
 
@@ -49,10 +49,6 @@
 
         body {
             margin: 0
-        }
-
-        nav {
-            display: block
         }
 
         h1 {
@@ -126,8 +122,7 @@
             -webkit-text-size-adjust: 100%
         }
 
-        main,
-        nav {
+        main {
             display: block
         }
 
@@ -248,36 +243,6 @@
             }
         }
 
-        .navbar {
-            position: relative;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            padding: .5rem 1rem
-        }
-
-        .navbar>.container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between
-        }
-
         .card {
             position: relative;
             display: -webkit-box;
@@ -338,18 +303,6 @@
             padding-left: 20px;
             padding-right: 20px;
             width: 100%
-        }
-
-        .navbar {
-            padding: 10px
-        }
-
-        .navbar .nav-logo {
-            margin: 0 auto
-        }
-
-        .navbar svg {
-            height: 70px
         }
 
         @media (max-width:small) {
@@ -523,24 +476,15 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo" title="Back to start"><svg data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.57 288.57" height="50" class="logo">
-                    <path d="M60 103.07l31.25 31.25 42.43-42.42L41.78 0H0v225.58l60-60v-62.51zM246.79 0L0 246.79v41.78h43.07l185.5-185.5v185.5h60V0h-41.78z" /></svg></a>
-        </div>
-    </nav>
     <main role="main">
 
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6">
-                    <address class="card card--max-width card--right" onclick="document.location='about.html'">
+                    <address class="card card--max-width card--right">
                         <div class="card__logo">
                             <div class="profile-photo">
-                                <picture width="250" height="250">
-                                    <source srcset="https://res.cloudinary.com/dykby9bas/image/upload/f_auto/v1570625685/profile-photo_a25ss1.webp" alt="Profile photo" type="image/webp">
-                                    <img src="https://res.cloudinary.com/dykby9bas/image/upload/f_auto/v1570625685/profile-photo_a25ss1.png" alt="Profile photo">
-                                </picture>
+                                <img src="/assets/img/profile-photo.png" width="250" height="250" alt="Profile photo">
                             </div>
                         </div>
 
@@ -551,7 +495,7 @@
                     </address>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <div class="card card--max-width card--portfolio" data-brand="Mr Green" onclick="document.location='/portfolio/mrgreen'">
+                    <div class="card card--max-width card--portfolio" data-brand="Mr Green">
                         <div class="card__logo">
                             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 476.98">
                                 <defs>
@@ -587,6 +531,9 @@
             </div>
         </div>
     </main>
+
+    <script src="assets/js/main.min.js"></script>
+
 </body>
 
 </html>

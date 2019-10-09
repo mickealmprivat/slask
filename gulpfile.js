@@ -25,6 +25,7 @@ const newer = require('gulp-newer');
 const autoprefixer = require('gulp-autoprefixer');
 const accessibility = require('gulp-accessibility');
 const babel = require('gulp-babel');
+const criticalCSS = require('critical').stream;
 
 // File paths
 const files = { 
@@ -158,6 +159,15 @@ function browserSyncInit(done) {
 }
 
 // ------------ OPTIMIZATION TASKS -------------
+// EXTRACT CRITICAL CSS
+console.log('---------------CRITICAL PATH CSS---------------');
+function critical() {
+  return src('dist/*.html')
+    .pipe(criticalCSS({base: 'dist/', inline: true, css: 'dist/assets/css/main.css'}))
+    .on('error', function(err) { console.log(err.message); })
+    .pipe(dest('dist'));
+}
+
 // COPIES AND MINIFY IMAGE TO DIST
 function images() {
   console.log('---------------OPTIMIZING IMAGES---------------');
@@ -325,4 +335,4 @@ exports.default = series(cleanDist, rootFiles, font, jsVendor, cssVendor, images
 exports.prod = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, portfolio, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs, browserSyncInit);
 
 // Build
-exports.build = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, portfolio, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, docs);
+exports.build = series(cleanDist, rootFiles, compileSCSS, font, jsVendor, cssVendor, images, portfolio, compileHTML, compileJS, concatScripts, minifyScripts, minifyCss, renameSources, critical, prettyHTML, docs);
