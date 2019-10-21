@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+$card-header-size: 254px;
 
 .card {
     background: #fff;
@@ -42,14 +43,20 @@
         }
     }
 
+    &__logo {
+        align-items: center;
+        display: flex;
+        height: $card-header-size;
+    }
+
     &--right {
         margin: 0 0 1.5rem auto;
     }
 
     &--portfolio {
         svg {
-            max-height: 254px;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto;
+            max-height: 175px;
         }
 
         h1 { font-size: 28px; }
@@ -98,13 +105,13 @@
 }
 
 .profile-photo {
-    $size: 254px;
+    $card-header-size: 254px;
 
     background: $brand-color;
     border-radius: 100%;
-    height: $size;
+    height: $card-header-size - 20px;
     margin: 0 auto 1.5rem;
-    width: $size;
+    width: auto;
     padding: 2px;
 
     img {
