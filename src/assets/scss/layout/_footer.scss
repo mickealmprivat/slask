@@ -2,5 +2,26 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer {
+    background: #2d2d2d;
     border-top: 1px solid $border-outline-color;
+    color: #d6d6d6;
+    font-size: 14px;
+    font-weight: 300;
+
+    .contacts a {
+        color: #d6d6d6;
+        font-size: 32px;
+        text-decoration: none;
+
+        @include on-event {
+            color: $brand-color;
+            text-decoration: none;
+            transition: all .2s;
+        }
+
+        [name="logo-instagram"] {
+            position: relative;
+            left: 3px;
+        }
+    }
 }

@@ -5,6 +5,8 @@
 $case-brand-height: 60px;
 
 .portfolio-case {
+    background: #fff;
+
     .back {
         color: #fff;
         font-size: 20px;
@@ -24,6 +26,13 @@ $case-brand-height: 60px;
         }
     }
     section {
+        &:first-of-type {
+            margin-top: 100vh;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+
         margin: 3rem 0;
         padding: 2rem 0;
 
@@ -56,8 +65,10 @@ $case-brand-height: 60px;
     }
 
     &__header {
-        height: calc(100vh - #{$nav-height});
-        z-index: 1000;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
 
         .container {
             align-items: center;
@@ -229,16 +240,6 @@ img.portfolio-mo-image {
 [data-brand="Mr Green"] {
     $brand-color: $mrgreen;
 
-    .portfolio-case__header {
-        &,
-        &--min {
-            background: $brand-color;
-            color: #fff;
-
-            svg { fill: #fff; }
-        }
-    }
-
     .user-journey {
         $journey-color: rgb(40, 84, 106);
         
@@ -302,6 +303,20 @@ img.portfolio-mo-image {
             }
         }
     }
-    .thanks { color: $brand-color; }
-    
+}
+
+// Episerver
+// -----------------------------------------------------------------------------
+[data-brand="Episerver"] {
+    $brand-color: $episerver;
+
+    .portfolio-case__header {
+        &,
+        &--min {
+            background: $brand-color;
+            color: #fff;
+
+            svg { fill: #fff; }
+        }
+    }
 }

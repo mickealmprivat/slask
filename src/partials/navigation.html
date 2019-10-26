@@ -1,5 +1,18 @@
-<nav class="navbar">
+<nav class="navbar sticky-top">
     <div class="container">
-        <a href="/" class="nav-logo" title="Back to start">{{>logo}}</a>
+        <a href="/" class="navbar-brand">
+            <div class="logo-container">
+                {{> logo id="headerLogo"}}
+            </div>
+            <div class="logo-text-container" data-hover="back to start">
+                <span class="logo-text">Micke Alm</span>
+            </div>
+        </a>
+        
+        <ol class="no-list">
+            <li><a href="#" title="Projects">Projects</a></li>
+            <li><a href="/about.html" title="About">About</a></li>
+            <li><a href="#" title="Resume">Resume</a></li>
+        </ol>
     </div>
 </nav>

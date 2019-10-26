@@ -5,10 +5,14 @@
 /**
  * Set up a decent box model on the root element
  */
+html, body { 
+  height: auto;
+  min-height: 100%; 
+}
+
 html {
   box-sizing: border-box;
 }
-body { padding-bottom: 3rem; }
 
 
 /**

@@ -1,0 +1,14 @@
+$brand: "Mr Green";
+$brand-color: $mrgreen;
+
+.card[data-brand="#{$brand}"] {
+    background: $brand-color;
+    color: #fff;
+}
+
+.portfolio-case__header[data-brand="#{$brand}"] {
+    background: $brand-color;
+    color: #fff;
+
+    svg { fill: #fff; }
+}

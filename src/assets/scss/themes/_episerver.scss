@@ -1,0 +1,7 @@
+$brand: "Episerver";
+$brand-color: $episerver;
+
+.card[data-brand="#{$brand}"] {
+    background: $brand-color;
+    color: #fff;
+}

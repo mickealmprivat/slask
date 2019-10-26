@@ -24,7 +24,8 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/card';
 
 // 6. Page-specific styles
 @import
@@ -33,4 +34,6 @@
 
 // 7. Themes
 @import
-  'themes/default';
+  'themes/default',
+  'themes/mrgreen',
+  'themes/episerver';

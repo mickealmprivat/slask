@@ -195,7 +195,7 @@ function jsVendor() {
       // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
       'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
       'node_modules/ionicons/dist/ionicons.js',
-      'src/assets/vendor/js/*',
+      'src/assets/js/vendor/*',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
