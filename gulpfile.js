@@ -39,13 +39,6 @@ function reload(done) {
   done();
 }
 
-// COPY PORTFOLIO ASSETS
-function portfolio() {
-  console.log('---------------COPYING PORTFOLIO ASSETS---------------');
-  return src(['src/pages/portfolio/**/images/*', 'src/pages/portfolio/**/videos/*'])
-  .pipe(dest('dist/portfolio/'));
-}
-
 // COMPILE SCSS INTO CSS
 function compileSCSS() {
   console.log('---------------COMPILING SCSS---------------');
@@ -175,6 +168,13 @@ function images() {
     .pipe(newer('dist/assets/img/'))
     .pipe(imagemin())
     .pipe(dest('dist/assets/img/'));
+}
+
+// COPY PORTFOLIO ASSETS
+function portfolio() {
+  console.log('---------------COPYING PORTFOLIO ASSETS---------------');
+  return src(['src/pages/portfolio/**/images/*', 'src/pages/portfolio/**/videos/*'])
+    .pipe(dest('dist/portfolio/'))
 }
 
 // PLACES FONT FILES IN THE DIST FOLDER
