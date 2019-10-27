@@ -1,3 +1,26 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+
+a.cta {
+    border: 2px solid $brand-color;
+    border-radius: 50px;
+    color: $brand-color;
+    display: inline-block;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s ease-out;
+    width: 100%;
+
+    @include on-event {
+        background: $brand-color;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all .2s ease-out;
+    }
+}

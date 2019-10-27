@@ -3,26 +3,78 @@ layout: portfolio
 title: Episerver order manager prototype - 
 description: Micke Alm concept prototype for Episervers order management system
 ---
-<div class="portfolio-case" data-brand="Episerver">
-	<div class="portfolio-case__header">
+<div class="portfolio-case__header" data-brand="Episerver">
+	<div class="container">
+		<div class="portfolio-case__header__item portfolio-case__logo">
+			{{> episerver}}
+		</div>
+		<div class="portfolio-case__header__item">
+			<hgroup>
+				<h2>Prototype</h2>
+				<h1>Episerver - Commerce order manager</h1>
+				<h3>2017</h3>
+			</hgroup>
+		</div>
+	</div>
+</div>
+
+<div class="portfolio-case pb-5" data-brand="Episerver">	
+	<section id="about">
 		<div class="container">
-			<a href="/" title="Back to start" class="back"><ion-icon name="arrow-round-back"></ion-icon> back to start</a>
-			<div class="portfolio-case__header__item portfolio-case__logo">
-				{{> episerver}}
+			<div class="row">
+				<div class="col-xs-12 col-md-7">
+					<h1>Challenge</h1>
+					<p>Towards the end of my 8 year tenure at Episerver, I was asked to develop a prototype for the order management system of the e-commerce product.</p>
+					<p>Being a legacy area of the product which hadn't been touched for far too long, we saw the opportunity to significantly improve the quality of life of the Customer Service Representatives (CSR) who would be using the product.</p>
+					<p>The purpose of the prototype was to explore possibilities, and test assumptions to really hone in on the workflow of the CSR. As such, it was designed <i>only</i> for desktop, with speed and agility in mind.</i></p>
+					<h3>Compatibility</h3>
+					<p>This is a prototype and has only been tested to work in <a href="https://www.google.com/chrome/" target="_blank" rel="noreferrer" title="Get Google Chrome">Chrome</a> or <a href="https://www.mozilla.org/en-GB/firefox/new/" target="_blank" rel="noreferrer" title="Get Firefox">Firefox</a>.</p>
+				</div>
+				<div class="col-xs-12 col-md-5 secondary-info">
+					<h3>About Episerver</h3>
+					<p><a href="http://www.episerver.com" target="_blank" rel="noreferrer" title="Episerver website">Episerver</a> is Sweden's leading CMS, E-Commerce and personalisation platform.</p>
+					<h3>My role</h3>
+					<p>I designed everything in the browser, and built a very high fidelity prototype using <a href="https://mockaroo.com/" title="Mockaroo" target="_blank">Mockaroo</a> for large and deep data sets.</a></p>
+					<p>The prototype was developed over a couple of weeks with frequent check-ins with Directors of Product <a href="https://www.linkedin.com/in/davidbowen1/" title="David Bowen LinkedIn" rel="noreferrer" target="_blank">David Bowen</a> and <a href="https://www.linkedin.com/in/schlosserchristian/" title="Christian Schlosser LinkedIn" rel="noreferrer" target="_blank">Christian Schlosser</a>.</p>
+				</div>	
 			</div>
-			<div class="portfolio-case__header__item">
-				<hgroup>
-					<h2>Prototype</h2>
-					<h1>Episerver - Commerce order manager</h1>
-					<h3>2017</h3>
-				</hgroup>
+			<!-- <div class="row">
+				<div class="col mt-5 mb-5">
+					<a href="https://ordermanager.mickealm.se" target="_blank" class="cta">Launch prototype</a>
+				</div>
+			</div> -->
+		</div>
+	</section>
+	<section id="discovery" class="light-grey">
+		<div class="container">
+			<h1>Discovery</h1>
+			<p>Interviewing CSR's, looking at our own system as well as those of competitors, it was clear that speed and efficiency was of the essence.</p>
+			<p>CSR's are often measured by their efficiency, and number of issues handled. Instead of having multiple different pages supporting individual functions, we wanted to bring it all together into one workflow. Primary features like updating a customers information, as well as CRUD'ing (Create, Remove, Update, Delete pattern) orders should be quickly accessible in the same context.</p>
+			<p>We also had to make sure the prototype works for both B2C and B2B.</p>
+		</div>
+	</section>
+	<!-- <section id="features">
+		<div class="container">
+			<h1>Views and features</h1>
+			<h2>Start</h2>
+			<p>The prototype starts with a list of all orders in the system sorted by date. This can be filtered by date, order status, order number, or customer information.</p>
+			<p>There are two scenarios we considered here: modifying an existing order, or creating a new one (imagining the CSR has the customer on the phone).</p>
+			
+			<h2 class="mt-5">View order</h2>
+			<p>I worked hard to make sure all information and sections relating to an order were in place, and easily readable.</p>
+			<p>In order to be able to test sufficiently, I also had to make sure that the </p>
+			
+			<h2 class="mt-5">View customer</h2>
+			<p>I worked hard to make sure all information and sections relating to an order were in place, and easily readable.</p>
+		</div>
+	</section> -->
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a href="https://ordermanager.mickealm.se" target="_blank" class="cta">Launch prototype</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="portfolio-case__header--min" data-brand="Mr Green">
-		<div class="portfolio-case__header--min__content">
-			<a href="/" title="Back to start">{{> logo }}</a>
-			<h1>Episerver - Commerce order manager</h1>
-		</div>
-	</div>
+	</section>
 </div>
