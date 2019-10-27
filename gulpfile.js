@@ -191,13 +191,11 @@ function font() {
 function jsVendor() {
   console.log('---------------COPY JAVASCRIPT VENDOR FILES INTO DIST---------------');
   return src([
-      // 'node_modules/jquery/dist/jquery.js',
-      // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
       'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
       'node_modules/ionicons/dist/ionicons.js',
       'src/assets/js/vendor/*',
     ])
-    .pipe(dest('dist/assets/vendor/js'))
+    .pipe(dest('dist/assets/vendor/js/'))
     .pipe(browserSync.stream());
 }
 
@@ -279,7 +277,7 @@ function renameSources() {
 function concatScripts() {
   console.log('---------------CONCATINATE SCRIPTS---------------');
   return src([
-      'dist/assets/vendor/js/jquery.js',
+      // 'dist/assets/vendor/js/jquery.js',
       // 'dist/assets/vendor/js/popper.js',
       // 'dist/assets/vendor/js/bootstrap.js',
       'dist/assets/vendor/js/ScrollMagic.js',
