@@ -293,6 +293,13 @@ img.portfolio-mo-image {
     }
 }
 
+[data-project="Deposit limits"] {
+    .card-image {
+        background-image: url('/portfolio/mrgreen/images/portfolio-image.png');
+        background-position: center center;
+    }
+}
+
 // Episerver
 // -----------------------------------------------------------------------------
 [data-brand="Episerver"] {
@@ -306,5 +313,12 @@ img.portfolio-mo-image {
 
             svg { fill: #fff; }
         }
+    }
+}
+
+[data-project="Order manager"] {
+    .card-image {
+        background-image: url('/portfolio/episerver/images/portfolio-image.png');
+        background-position: top left;
     }
 }

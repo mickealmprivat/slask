@@ -1,9 +1,19 @@
 $brand: "Episerver";
 $brand-color: $episerver;
 
-.card[data-brand="#{$brand}"] {
-    background: $brand-color;
-    color: #fff;
+.card{
+    &[data-brand="#{$brand}"] {
+        svg path { fill: $brand-color; }
+
+        &:hover {
+            .card-content {
+                background: $brand-color;
+                color: #fff;
+    
+                svg path { fill: #fff; }
+            }
+        }
+    }
 }
 
 .portfolio-case__header[data-brand="#{$brand}"] {

@@ -7,43 +7,39 @@ title:
 <div class="splash">
     <div class="splash__face"></div>
     <div class="splash__content container"><h1>Hello!</h1>
-        <p>I am a product designer, developer, photographer, facilitator, and leader.</p>
+        <p>I am a product/UX/UI designer, prototyper, photographer, facilitator, and leader.</p>
         <p>My passion has always been about helping people, both in the products we design, and the teams we build. Either way, it always boils down to humans, and trying to make them successful!</p>
-        <p>Check out my work below, and don't hesitate to <a href="javascript:location='mailto:\u006d\u0069\u0063\u006b\u0065\u0061\u006c\u006d\u0077\u006f\u0072\u006b\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0" title="Contact me">get in touch</a>!</p>
+        <p>Check out some of my work below, and don't hesitate to <a href="javascript:location='mailto:\u006d\u0069\u0063\u006b\u0065\u0061\u006c\u006d\u0077\u006f\u0072\u006b\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0" title="Contact me">get in touch</a>!</p>
     </div>
 </div>
 
-<div class="content">
+<div class="content" id="projects">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col">
-                <div class="card card--portfolio" data-brand="Mr Green" onclick="document.location='/portfolio/mrgreen/deposit-limits.html'">
-                    <div class="card__logo">
-                        {{> mrgreen}}
+                <div class="card card--portfolio" onclick="document.location='/portfolio/mrgreen/deposit-limits.html'" data-brand="Mr Green" data-project="Deposit limits">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <div class="card-logo">
+                            {{> mrgreen}}
+                        </div>
+                        <div class="card-text">
+                            <h1>Swedish deposit limits</h1>
+                            <h2>UX case study</h2>
+                        </div>
                     </div>
-                    
-                    <h1>Swedish deposit limits</h1>
-                    <h2>UX case study</h2>
                 </div>
-            </div>
-            <div class="col-xs-12 col">
-                <div class="card card--portfolio" data-brand="Episerver" onclick="document.location='/portfolio/episerver/order-manager.html'">
-                    <div class="card__logo">
-                        {{> episerver}}
+                <div class="card card--portfolio" onclick="document.location='/portfolio/episerver/order-manager.html'" data-brand="Episerver" data-project="Order manager">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <div class="card-logo">
+                            {{> episerver}}
+                        </div>
+                        <div class="card-text">
+                            <h1>Order management system</h1>
+                            <h2>Prototype</h2>
+                        </div>
                     </div>
-                    
-                    <h1>Order management system</h1>
-                    <h2>Prototype</h2>
-                </div>
-            </div>
-            <div class="col-xs-12 col">
-                <div class="card card--portfolio" data-brand="Mr Green" onclick="document.location='/portfolio/episerver/order-manager.html'">
-                    <div class="card__logo">
-                        {{> mrgreen}}
-                    </div>
-                    
-                    <h1>Corporate headshots</h1>
-                    <h2>Photography</h2>
                 </div>
             </div>
         </div>

@@ -2,124 +2,188 @@ $card-header-size: 254px;
 
 .card {
     background: #fff;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    display: block;
-    font-size: 18px;
-    text-align: center;
-    padding: 24px;
-    position: sticky;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    top: 40px;
-
-    h1 { font-size: 28px; }
-    h2 { font-size: 18px; }
-
-    ul { text-align: left; }
-
-    ion-icon {
-        color: $brand-color-dark;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+    
+    & + .card {
+        margin-top: 24px;
     }
-
     &:hover {
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
-
-    &--max-width {
-        cursor: pointer;
-        max-width: 380px;
-        height: 400px;
-        overflow: hidden;
-        width: 100%;
-        position: relative;
-
-        @include media-breakpoint-down(md) {
-            height: 400px;
-        }
-    }
-
-    &__logo {
-        align-items: center;
-        display: flex;
-        height: $card-header-size;
-    }
-
-    &--right {
-        margin: 0 0 1.5rem auto;
+        transform: scale(1.005);
     }
 
     &--portfolio {
-        svg {
-            margin: 0 auto;
-            max-height: 175px;
-            width: 225px;
-        }
+        display: flex;
+        flex-direction: row;
 
-        h1 { font-size: 28px; }
-        h2 { 
+        h1 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+        h2 {
             font-size: 20px;
             font-weight: 300;
         }
     }
-
-    &__link {
-        background: $brand-color-dark;
-        bottom: 0px;
+    &-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        flex: 1;
+    }
+    &-content {
+        box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.1);
         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 40px;
-        font-weight: 400;
-        height: 100%;
-        left: 0;
-        line-height: 50px;
-        opacity: .9;
-        position: absolute;
+        flex: 2;
+        flex-direction: column;
         text-align: center;
-        text-decoration: none;
-        transform: translateY(100%);
-        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        width: 100%;
+        transition: all .4s ease-out;
 
-        @include on-event {
-            color: #fff;
-            text-decoration: none;
+        .card-logo {
+            flex: 1;
+            padding: 40px 40px 0;
+
+            svg {
+                margin: 0 auto;
+                max-height: 150px;
+                max-width: 150px;
+            }
         }
-
-        @include media-breakpoint-down(md) {
-            display: none;
+        .card-text {
+            flex: 2;
+            padding: 24px;
         }
     }
-
-    .no-list li { margin-bottom: 4px; }
 }
 
-.profile-photo {
-    $card-header-size: 254px;
 
-    background: $brand-color;
-    border-radius: 100%;
-    height: $card-header-size - 20px;
-    margin: 0 auto 1.5rem;
-    width: auto;
-    padding: 2px;
+// .card {
+//     background: #fff;
+//     border-radius: 2px;
+//     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+//     display: block;
+//     font-size: 18px;
+//     text-align: center;
+//     position: sticky;
+//     
+//     top: 40px;
 
-    img {
-        border: 5px solid #fff;
-        border-radius: 100%;
-        display: block;
-        height: 100%;
-        width: 100%;
-    }
+//     h1 { font-size: 28px; }
+//     h2 { font-size: 18px; }
 
-    @include media-breakpoint-down(md) {
-        margin: 0 auto;
-    }
-}
+//     ul { text-align: left; }
 
-.employment-list {
-    .row {
-        margin-bottom: 1em;
-    }
-}
+//     ion-icon {
+//         color: $brand-color-dark;
+//     }
+
+//     &:hover {
+//         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+//     }
+//     &__body {
+//         display: flex;
+//     }
+//     &__body__logo {
+//         align-items: center;
+//     }
+//     &__body__content {
+//         flex: 1;
+//         padding: 24px;
+//     }
+
+//     &--max-width {
+//         cursor: pointer;
+//         max-width: 380px;
+//         height: 400px;
+//         overflow: hidden;
+//         width: 100%;
+//         position: relative;
+
+//         @include media-breakpoint-down(md) {
+//             height: 400px;
+//         }
+//     }
+
+//     &--right {
+//         margin: 0 0 1.5rem auto;
+//     }
+
+//     &--portfolio {
+//         svg {
+//             margin: 0 auto;
+//             max-height: 175px;
+//             width: 225px;
+//         }
+
+//         h1 { font-size: 28px; }
+//         h2 { 
+//             font-size: 20px;
+//             font-weight: 300;
+//         }
+//     }
+
+//     &__link {
+//         background: $brand-color-dark;
+//         bottom: 0px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         color: #fff;
+//         font-size: 40px;
+//         font-weight: 400;
+//         height: 100%;
+//         left: 0;
+//         line-height: 50px;
+//         opacity: .9;
+//         position: absolute;
+//         text-align: center;
+//         text-decoration: none;
+//         transform: translateY(100%);
+//         transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+//         width: 100%;
+
+//         @include on-event {
+//             color: #fff;
+//             text-decoration: none;
+//         }
+
+//         @include media-breakpoint-down(md) {
+//             display: none;
+//         }
+//     }
+
+//     .no-list li { margin-bottom: 4px; }
+// }
+
+// .profile-photo {
+//     $card-header-size: 254px;
+
+//     background: $brand-color;
+//     border-radius: 100%;
+//     height: $card-header-size - 20px;
+//     margin: 0 auto 1.5rem;
+//     width: auto;
+//     padding: 2px;
+
+//     img {
+//         border: 5px solid #fff;
+//         border-radius: 100%;
+//         display: block;
+//         height: 100%;
+//         width: 100%;
+//     }
+
+//     @include media-breakpoint-down(md) {
+//         margin: 0 auto;
+//     }
+// }
+
+// .employment-list {
+//     .row {
+//         margin-bottom: 1em;
+//     }
+// }
