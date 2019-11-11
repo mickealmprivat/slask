@@ -1,39 +1,126 @@
-@charset 'UTF-8';
-// 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins';
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-// 2. Vendors
-@import
-  'vendors/normalize',
-  'vendors/bootstrap';
+$low: #55BA64;
+$medium: #FFE09B;
+$high: #FF9B64;
+$severe: #FF2A44;
 
-// 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
 
-// 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-// 5. Components
-@import
-  'components/button',
-  'components/card';
 
-// 6. Page-specific styles
-@import
-  'pages/home',
-  'pages/portfolio';
+.card {
+  border-radius: 10px;
+  box-shadow: 0 16px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0;
+  min-height: 300px;
+  max-width: 500px;
 
-// 7. Themes
-@import
-  'themes/default',
-  'themes/mrgreen',
-  'themes/episerver';
+  &__header {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 24px;
+
+    .current-risk-container {
+      border-right: 1px solid #C5C5C5;
+      margin-right: 16px;
+      padding-right: 16px;
+    }
+    .risk-marker {
+      $marker-size: 40px;
+
+      display: inline-block;
+      height: $marker-size;
+      margin-right: 8px;
+      position: relative;
+      width: $marker-size;
+
+      &::after {
+        content: attr(data-risk-level);
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: $marker-size;
+        text-align: center;
+        position: absolute;
+        
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &[data-risk-level="L"]::after {
+        background: $low;
+      }
+      &[data-risk-level="M"]::after {
+        background: $medium;
+        color: #505050;
+      }
+      &[data-risk-level="H"]::after {
+        background: $high;
+      }
+      &[data-risk-level="S"]::after {
+        background: $severe;
+      }
+    }
+    hgroup {
+      display: inline-block;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .trend {
+      display: inline-block;
+      transform: rotate(-10deg);
+      transform-origin: center;
+
+      svg { 
+        fill: $low;
+        width: 24px;
+      }
+    }
+  }
+
+  &__graph {
+    background: red;
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+
+    .graph-container {
+      flex: 1;
+    }
+
+    .graph-1 {
+      background: blue;
+      flex: 2;
+    }
+  }
+
+  &__footer {
+    padding: 12px 16px;
+
+    .icon {
+      background: #f90;
+      display: inline-block;
+      height: 24px;
+      margin: 8px;
+      width: 24px;
+    }
+  }
+}

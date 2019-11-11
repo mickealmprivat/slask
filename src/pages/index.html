@@ -1,47 +1,35 @@
 ---
 layout: default
-description: Micke Alm - product and UX designer portfolio and consultant profile
+description: 
 title: 
 ---
 
-<div class="splash">
-    <div class="splash__face"></div>
-    <div class="splash__content container"><h1>Hello!</h1>
-        <p>I am a product/UX/UI designer, prototyper, photographer, facilitator, and leader.</p>
-        <p>My passion has always been about helping people, both in the products we design, and the teams we build. Either way, it always boils down to humans, and trying to make them successful!</p>
-        <p>Check out some of my work below, and don't hesitate to <a href="javascript:location='mailto:\u006d\u0069\u0063\u006b\u0065\u0061\u006c\u006d\u0077\u006f\u0072\u006b\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0" title="Contact me">get in touch</a>!</p>
-    </div>
-</div>
-
-<div class="content" id="projects">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col">
-                <div class="card card--portfolio" onclick="document.location='/portfolio/mrgreen/deposit-limits.html'" data-brand="Mr Green" data-project="Deposit limits">
-                    <div class="card-image"></div>
-                    <div class="card-content">
-                        <div class="card-logo">
-                            {{> mrgreen}}
-                        </div>
-                        <div class="card-text">
-                            <h1>Swedish deposit limits</h1>
-                            <h2>UX case study</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card--portfolio" onclick="document.location='/portfolio/episerver/order-manager.html'" data-brand="Episerver" data-project="Order manager">
-                    <div class="card-image"></div>
-                    <div class="card-content">
-                        <div class="card-logo">
-                            {{> episerver}}
-                        </div>
-                        <div class="card-text">
-                            <h1>Order management system</h1>
-                            <h2>Prototype</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="card">
+    <div class="card__header">
+        <div class="current-risk-container">
+            <div class="risk-marker" data-risk-level="M"></div>
+            <hgroup>
+                <h3>Current risk score</h3>
+                <h2>Medium</h2>
+            </hgroup>
         </div>
+        <hgroup>
+            <h3>Trend</h3>
+            <div class="trend">
+                <svg version="1.1" id="Arrow_bold_right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
+                    <path d="M17.5,10L10,17.5V14H3V6h7V2.5L17.5,10z"/>
+                </svg>
+            </div>
+        </hgroup>
+    </div>
+    <div class="card__graph">
+        <div class="graph-1 graph-container"></div>
+        <div class="graph-2 graph-container"></div>
+    </div>
+    <div class="card__footer">
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
     </div>
 </div>
