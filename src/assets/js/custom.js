@@ -1,19 +1,12 @@
-"use strict";
-var controller = new ScrollMagic.Controller();
+function toggleActiveButton(event) {
+  Array.from(document.getElementsByClassName('btn'))
+    .filter(element => element !== event.target)
+    .forEach(element => {
+      element.classList.remove('btn--active')
+      element.setAttribute('aria-pressed', false);
+    });
 
-// Portfolio videos play on enter
-function playVideos() {
-  var videoElements = document.getElementsByClassName('portfolio-video');
-
-  for (var i=0; i<videoElements.length; i++) {
-    var videoScene = new ScrollMagic.Scene({
-      triggerElement: videoElements[i],
-      triggerHook: 'onEnter'
-    })
-      .on('enter', function(e) {
-        e.target.triggerElement().play();
-      })
-      .addTo(controller);
-  }
+  event.target.classList.toggle('btn--active');
+  const pressed = event.target.getAttribute('aria-pressed') === 'true';
+  event.target.setAttribute('aria-pressed', String(!pressed));
 }
-playVideos();

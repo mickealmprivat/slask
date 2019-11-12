@@ -28,6 +28,17 @@ $severe: #FF2A44;
     flex-direction: row;
     padding: 8px 24px;
 
+    &-section {
+      flex: 1;
+    }
+
+    &--right {
+      align-content: right;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+
     .current-risk-container {
       border-right: 1px solid #C5C5C5;
       margin-right: 16px;
@@ -121,6 +132,39 @@ $severe: #FF2A44;
       height: 24px;
       margin: 8px;
       width: 24px;
+    }
+  }
+}
+
+.button-group {
+  $border-radius: 10px;
+
+  border: 1px solid #bdc1c8;
+  border-radius: $border-radius;
+  display: inline-block;
+  overflow: hidden;
+  
+  .btn {
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+    height: 24px;
+    margin: 0;
+    padding: 0px 16px;
+
+    &--active {
+      background: $low;
+      color: #fff;
+      font-weight: 600;
+      transition: background .2s ease-out;
+    }
+    
+    &:first-of-type {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+    &:last-of-type {
+      border-radius: 0px $border-radius $border-radius 0;
     }
   }
 }
